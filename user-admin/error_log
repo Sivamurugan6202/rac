@@ -1,0 +1,11 @@
+[04-Jun-2021 13:30:46 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/u434590366/domains/sr-mediatech.com/public_html/rac/user-admin/validatelogin.php on line 26
+[08-Jun-2021 13:47:26 UTC] PHP Warning:  require(fpdf181/fpdf.php): failed to open stream: No such file or directory in /home/u434590366/domains/sr-mediatech.com/public_html/rac/user-admin/fpdftut.php on line 2
+[08-Jun-2021 13:47:26 UTC] PHP Warning:  require(fpdf181/fpdf.php): failed to open stream: No such file or directory in /home/u434590366/domains/sr-mediatech.com/public_html/rac/user-admin/fpdftut.php on line 2
+[08-Jun-2021 13:47:26 UTC] PHP Fatal error:  require(): Failed opening required 'fpdf181/fpdf.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/u434590366/domains/sr-mediatech.com/public_html/rac/user-admin/fpdftut.php on line 2
+[08-Jun-2021 13:47:45 UTC] PHP Warning:  require(./fpdf181/fpdf.php): failed to open stream: No such file or directory in /home/u434590366/domains/sr-mediatech.com/public_html/rac/user-admin/fpdftut.php on line 2
+[08-Jun-2021 13:47:45 UTC] PHP Warning:  require(./fpdf181/fpdf.php): failed to open stream: No such file or directory in /home/u434590366/domains/sr-mediatech.com/public_html/rac/user-admin/fpdftut.php on line 2
+[08-Jun-2021 13:47:45 UTC] PHP Fatal error:  require(): Failed opening required './fpdf181/fpdf.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/u434590366/domains/sr-mediatech.com/public_html/rac/user-admin/fpdftut.php on line 2
+[10-Jun-2021 16:20:38 UTC] PHP Notice:  Undefined variable: mypasssword in /home/u434590366/domains/sr-mediatech.com/public_html/rac/user-admin/validatelogin.php on line 11
+[10-Jun-2021 16:20:38 UTC] PHP Notice:  Undefined variable: result in /home/u434590366/domains/sr-mediatech.com/public_html/rac/user-admin/validatelogin.php on line 19
+[10-Jun-2021 16:20:38 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/u434590366/domains/sr-mediatech.com/public_html/rac/user-admin/validatelogin.php on line 19
+[10-Jun-2021 16:21:53 UTC] PHP Notice:  Undefined variable: mypasssword in /home/u434590366/domains/sr-mediatech.com/public_html/rac/user-admin/validatelogin.php on line 11

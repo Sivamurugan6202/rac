@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reporting Portal Login - Rotaract 3201</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <style>
+        .body {
+            background-image: url("images/front-bg.jpeg") !important;
+        }
+
+        .xs-copyright {
+            text-align: center;
+            width: 100%;
+            padding-top: 30px;
+        }
+
+        .xs-copyright-text {
+            color: #ffffffe3;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 0.8px;
+            text-align-last: left;
+        }
+
+        .xs-copyright-text a {
+            color: #c9010c;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .xs-copyright-text a:hover {
+            text-decoration: underline;
+        }
+
+        .xs-copyright-text a.link {
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .xs-back {
+            position: fixed;
+            padding: 5px 40px;
+            background-color: #d32b29 !important;
+            border-top-left-radius: 75px;
+            border-top-right-radius: 75px;
+            z-index: 9999;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .xs-back-to-login-wraper {
+            float: left;
+        }
+
+        .xs-back-to-login {
+            line-height: 50px;
+            background-color: #d32b29 !important;
+            color: #212529;
+            text-align: center;
+            display: inline-block;
+            font-size: 31px;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+
+        .xs-back-to-home-wraper {
+            float: left;
+        }
+
+        .xs-back-to-home {
+            line-height: 50px;
+            background-color: #d32b29 !important;
+            color: #212529;
+            text-align: center;
+            display: inline-block;
+            font-size: 31px;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+
+        .xs-back-to-back-wraper {
+            float: right;
+        }
+
+        .xs-back-to-back {
+            line-height: 50px;
+            background-color: #d32b29 !important;
+            color: #212529;
+            text-align: center;
+            display: inline-block;
+            font-size: 31px;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+
+        .xs-back-to-home-wraper a:hover {
+            color: #fff;
+        }
+
+        .xs-back-to-login-wraper a:hover {
+            color: #fff;
+        }
+
+        .xs-back-to-back-wraper a:hover {
+            color: #fff;
+        }
+
+        @media only screen and (max-width: 580px) {
+            .xs-back-to-top-wraper {
+                display: none;
+            }
+
+            .xs-copyright {
+                padding: 10px 0px 50px 0;
+                font-size: 13px;
+            }
+
+            .xs-copyright-text {
+                color: #333333 !important;
+                text-align-last: center;
+            }
+
+            .xs-copyright-text a.link {
+                color: #d32b29;
+            }
+        }
+
+        @media only screen and (min-width: 580px) {
+            .xs-back {
+                display: none;
+            }
+
+        }
+
+        @media only screen and (max-width: 580px) {
+            .xs-back-to-home-wraper {
+                margin-left: 200px;
+            }
+        }
+
+        @media only screen and (max-width: 530px) {
+            .xs-back-to-home-wraper {
+                margin-left: 180px;
+            }
+
+        }
+
+        @media only screen and (max-width: 499px) {
+            .xs-back-to-home-wraper {
+                margin-left: 150px;
+            }
+        }
+
+        @media only screen and (max-width: 449px) {
+            .xs-back-to-home-wraper {
+                margin-left: 125px;
+            }
+        }
+
+        @media only screen and (max-width: 419px) {
+            .xs-back-to-home-wraper {
+                margin-left: 115px;
+            }
+        }
+
+        @media only screen and (max-width: 399px) {
+            .xs-back-to-home-wraper {
+                margin-left: 105px;
+            }
+        }
+
+        @media only screen and (max-width: 370px) {
+            .xs-back-to-home-wraper {
+                margin-left: 95px;
+            }
+        }
+
+        @media only screen and (max-width: 360px) {
+            .xs-back-to-home-wraper {
+                margin-left: 90px;
+            }
+        }
+
+        @media only screen and (max-width: 280px) {
+            .xs-back-to-home-wraper {
+                margin-left: 55px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" method="post" action="validatelogin.php">
+                    <div class="login100-pic">
+                        <img src="Rotaract_3201_White.png" alt="IMG" style="width: 50%;margin-left: 50px;">
+                    </div>
+                    <span class="login100-form-title">
+                        Reporting Portal
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Valid Club-ID is required">
+                        <input class="input100" type="text" name="name" placeholder="Enter Your Club-ID">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" name="password" placeholder="Password" id="myInput">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
+
+                    <div class="text-center p-t-12">
+                        <span class="txt1">
+                            Forgot
+                        </span>
+                        <a class="txt2" href="forgot.html">
+                            Username / Password?
+                        </a>
+                    </div>
+
+                    <!-- <div class="text-center p-t-136">
+						<a class="txt2" href="reg.php">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div> -->
+                </form>
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="logo-white.png" alt="IMG">
+                </div>
+                <div class="xs-copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="xs-copyright-text">
+                                Developed by <a href="https://sr-mediatech.com/">SR Media Tech </a> - crafted by<a
+                                    href="https://sr-mediatech.com/"> KS Globals</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="xs-copyright-text" style="text-align-last: center;">
+                                &copy; Copyright 2021 <a class="link"
+                                    href="https://www.rotaract3201.org/index.php">Rotaract 3201</a>
+                                - All Rights Reserved
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="xs-back">
+            <div class="xs-back-to-login-wraper">
+                <a href="index.html" class="xs-back-to-login"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                        height="25" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                        <path
+                            d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="xs-back-to-home-wraper">
+                <a href="../index.php" class="xs-back-to-home"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                        height="30" fill="currentColor" class="bi bi-house-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L8 2.207l6.646 6.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                        <path fill-rule="evenodd"
+                            d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Zm0 5.189c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018Z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="xs-back-to-back-wraper">
+                <a class="xs-back-to-back" href="javascript:history.go(-1)"
+                    onMouseOver="self.status.referrer;return true">
+                    <svg class="svg-icon mr-0 text-danger-icon" xmlns="http://www.w3.org/2000/svg" width="30"
+                        height="30" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"
+                        stroke="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        <!--<path  fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>-->
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+</body>
+
+
+</html>
