@@ -22,7 +22,7 @@ foreach ($members as $mem) {
     }
 }
 foreach ($reports as $rep) {
-    if ($_SESSION['base_group'] == '5') {
+    if ($_SESSION['base_group'] == '4') {
         $count['rep'] += 1;
     } else {
         if ($_SESSION['base_group'] == $rep->groups) {
@@ -132,7 +132,7 @@ foreach ($reports as $rep) {
                             </a>
                         </div>
                     </div>
-                    <?php if ($_SESSION['base_group'] == 5) : ?>
+                    <?php if ($_SESSION['base_group'] == 4) : ?>
                         <div class="col-lg-4 col-md-6">
                             <div class="card card-block card-stretch card-height">
                                 <a href="memberlist.php">
