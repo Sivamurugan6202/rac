@@ -128,7 +128,6 @@ $cbs = $cb->getClubWCid($_SESSION['cid']);
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-8">
                         <a href="dashboard.php" class="header-logo">
                             <h4 style="color: #fff; text-align: center; font-size: 25px;padding: 10px;">ROTARACT CLUB OF <span style="font-size: 25px; text-align: center; font-weight: 600;text-transform: uppercase;"><?php echo isset($cbs->name) ? $cbs->name : ''; ?></span></h4>

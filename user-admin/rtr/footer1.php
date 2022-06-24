@@ -174,6 +174,7 @@
         </footer>
     </div>
 </div>
+
 <div class="xs-back">
     <div class="xs-back-to-login-wraper">
         <a href="logout.php" class="xs-back-to-login">
