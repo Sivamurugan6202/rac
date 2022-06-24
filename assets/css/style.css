@@ -1,6 +1,7 @@
-html{
+html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: poppins, sans-serif;
     font-weight: 400;
@@ -82,7 +83,7 @@ li {
 }
 
 .xs-heading .xs-title {
-    color: #F15C22;
+    color: #d52b29;
     font-size: 35px;
     font-weight: 700;
     letter-spacing: -0.2px;
@@ -93,7 +94,7 @@ li {
 
 footer .xs-footer-list li a:hover,
 header .nav-menus-wrapper .nav-menu li a:hover {
-    color: #F15C22;
+    color: #d52b29;
 }
 
 .xs-heading .xs-title:before {
@@ -197,7 +198,7 @@ header .nav-menus-wrapper .nav-menu li a:hover {
 .xs-separetor.v3 {
     width: 104px;
     height: 2px;
-    background-image: repeating-linear-gradient( to right, #041d57 0%, #041d57 40%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, #041d57 60%, #041d57 100%);
+    background-image: repeating-linear-gradient(to right, #041d57 0%, #041d57 40%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, #041d57 60%, #041d57 100%);
 }
 
 .xs-separetor.v3::before,
@@ -222,7 +223,7 @@ header .nav-menus-wrapper .nav-menu li a:hover {
 }
 
 .xs-separetor.dashed {
-    background-image: repeating-linear-gradient( to right, #041d57 0%, #041d57 16%, rgba(255, 255, 255, 0) 16%, rgba(255, 255, 255, 0) 32%, #041d57 32%, #041d57 48%, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 0) 64%, #041d57 64%, #041d57 80%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 96%, rgba(4, 29, 87, 0) 96%, rgba(4, 29, 87, 0) 100%);
+    background-image: repeating-linear-gradient(to right, #041d57 0%, #041d57 16%, rgba(255, 255, 255, 0) 16%, rgba(255, 255, 255, 0) 32%, #041d57 32%, #041d57 48%, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 0) 64%, #041d57 64%, #041d57 80%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 96%, rgba(4, 29, 87, 0) 96%, rgba(4, 29, 87, 0) 100%);
 }
 
 .xs-round-btn {
@@ -318,16 +319,16 @@ header .nav-menus-wrapper .nav-menu li a:hover {
 }
 
 .btn-primary {
-    background-color: #F15C22;
+    background-color: #d52b29;
 }
 
 .btn-primary:hover:before,
 .btn-primary:hover:after {
-    background-color: black;
+    background-color: #003049;
 }
 
 .btn-primary:hover {
-    background-color: #F15C22;
+    background-color: #d52b29;
     color: #fff;
 }
 
@@ -338,13 +339,13 @@ header .nav-menus-wrapper .nav-menu li a:hover {
 }
 
 .btn-outline-primary:hover {
-    background-color: #F15C22;
+    background-color: #d52b29;
     border: none;
     color: white;
 }
 
 .btn-secondary {
-    background-color: #F15C22;
+    background-color: #d52b29;
 }
 
 .btn-secondary:hover:before,
@@ -353,7 +354,7 @@ header .nav-menus-wrapper .nav-menu li a:hover {
 }
 
 .btn-secondary:hover {
-    background-color: #F15C22;
+    background-color: #d52b29;
     color: #fff;
 }
 
@@ -533,17 +534,17 @@ a.xs-post-title:hover {
 
 .xs-social-list li a.color-facebook:hover,
 .xs-social-list-v2 li a.color-facebook:hover {
-    background-color: #F15C22;
+    background-color: #d52b29;
 }
 
 .xs-social-list li a.color-instagram:hover,
 .xs-social-list-v2 li a.color-instagram:hover {
-    background-color: #F15C22;
+    background-color: #d52b29;
 }
 
 .xs-social-list li a.color-linkedin:hover,
 .xs-social-list-v2 li a.color-linkedin:hover {
-    background-color: #F15C22;
+    background-color: #d52b29;
 }
 
 .xs-social-list.square li a,
@@ -585,17 +586,17 @@ a.xs-post-title:hover {
 
 .xs-social-list.simple li a.color-facebook:hover,
 .simple.xs-social-list-v2 li a.color-facebook:hover {
-    color: #F15C22;
+    color: #d52b29;
 }
 
 .xs-social-list.simple li a.color-instagram:hover,
 .simple.xs-social-list-v2 li a.color-instagram:hover {
-    color: #F15C22;
+    color: #d52b29;
 }
 
 .xs-social-list.simple li a.color-linkedin:hover,
 .simple.xs-social-list-v2 li a.color-linkedin:hover {
-    color: #F15C22;
+    color: #d52b29;
 }
 
 .xs-social-list.simple li:last-child,
@@ -638,10 +639,14 @@ a.xs-post-title:hover {
 .xs-social-list-v2 li a {
     width: 40px;
     height: 40px;
-    line-height: 40px;
-    border: 1px solid #55acee;
+    line-height: 36px;
+    border: 1px solid #d52b29;
     background-color: transparent;
     font-size: 1em;
+}
+
+.xs-social-list-v2 li a:hover {
+    color: #003049 !important;
 }
 
 .xs-round-nav {
@@ -651,7 +656,7 @@ a.xs-post-title:hover {
     text-align: center;
     display: block;
     border-radius: 100%;
-    background-color: #F15C22;
+    background-color: #d52b29;
     color: #fff;
     font-size: 1.42857em;
     -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
@@ -698,7 +703,7 @@ blockquote:before {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    color: #F15C22;
+    color: #d52b29;
     font-size: 2.14286em;
 }
 
@@ -747,7 +752,7 @@ blockquote span {
     width: 40px;
     height: 40px;
     line-height: 40px;
-    background-color: #F15C22;
+    background-color: #d52b29;
     text-align: center;
     color: #fff;
     font-size: 1.14286em;
@@ -766,13 +771,14 @@ blockquote span {
     background-color: #369ff4;
 }
 
-.xs-info-list li{
+.xs-info-list li {
     color: #fff;
     font-size: 14px;
     line-height: 1.49;
     margin-bottom: 17px;
     display: flow-root;
 }
+
 .xs-info-list a {
     color: #fff;
     font-size: 14px;
@@ -789,7 +795,7 @@ blockquote span {
 }
 
 .xs-info-list a:hover {
-    color: #fff;
+    color: #d52b29;
 }
 
 .xs-info-list li:last-child {
@@ -813,7 +819,7 @@ blockquote span {
     width: 50px;
     height: 50px;
     line-height: 50px;
-    background-color: #F15C22 !important;
+    background-color: #d52b29 !important;
     color: #fff;
     text-align: center;
     display: inline-block;
@@ -824,7 +830,7 @@ blockquote span {
 
 .xs-back-to-top:hover {
     color: #fff;
-    background-color: black !important;
+    background-color: #003049 !important;
 }
 
 .xs-unorder-list li {
@@ -891,7 +897,7 @@ blockquote span {
 }
 
 .xs-unorder-list.green-icon li:before {
-    color: #3ac798;
+    color: #003049;
 }
 
 .lead {
@@ -981,11 +987,13 @@ blockquote span {
 }
 
 @-webkit-keyframes sk-bounce {
+
     0%,
     100% {
         -webkit-transform: scale(0);
         transform: scale(0);
     }
+
     50% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -993,11 +1001,13 @@ blockquote span {
 }
 
 @keyframes sk-bounce {
+
     0%,
     100% {
         -webkit-transform: scale(0);
         transform: scale(0);
     }
+
     50% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -1014,8 +1024,8 @@ blockquote span {
 }
 
 .xs-header .nav-menu li a {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 800;
     cursor: pointer;
     text-transform: uppercase;
     padding: 40px 15px;
@@ -1119,7 +1129,7 @@ blockquote span {
 }
 
 .xs-top-bar.top-bar-second {
-    background-color: #010a0c;
+    background-color: #003049;
     /*position: relative;*/
     overflow: hidden;
 }
@@ -1236,8 +1246,8 @@ blockquote span {
 }
 
 .xs-header.xs-fullWidth .nav-menu li a {
-    padding: 20px 25px;
-    color: #222;
+    padding: 18px 18px;
+    color: #003049;
 }
 
 .xs-header.xs-fullWidth .nav-menu li a .submenu-indicator-chevron {
@@ -1265,7 +1275,8 @@ blockquote span {
 }
 
 .xs-menus.xs_nav-landscape .nav-submenu li a:hover {
-    color: #F15C22;
+    color: #d52b29;
+    margin-left: 5px;
 }
 
 .xs-menus.xs_nav-landscape .nav-submenu li:last-child a {
@@ -1319,6 +1330,7 @@ blockquote span {
 
 .xs-welcome-wraper .xs-btn-wraper a {
     font-size: 1em;
+    margin-top: 380px;
 }
 
 .xs-welcome-wraper .xs-btn-wraper .badge {
@@ -1331,7 +1343,11 @@ blockquote span {
 }
 
 .xs-welcome-wraper.banner-verion-2 h2 {
-    font-size: 5.14286em;
+    margin-left: 70px;
+    font-size: 60px;
+    margin-top: 370px;
+    font-weight: 600;
+    letter-spacing: 3px;
 }
 
 .xs-banner-slider {
@@ -1409,6 +1425,7 @@ blockquote span {
         -webkit-transform: translate3d(50px, 0, 0);
         transform: translate3d(50px, 0, 0);
     }
+
     to {
         opacity: 1;
         -webkit-transform: none;
@@ -1806,7 +1823,7 @@ blockquote span {
 }
 
 .xs-service-promo span {
-    color: #F15C22;
+    color: #d52b29;
     display: inline-block;
     margin-bottom: 30px;
     font-size: 4.28571em;
@@ -1831,7 +1848,7 @@ blockquote span {
 .xs-service-promo h5 {
     font-size: 1.28571em;
     font-weight: 700;
-    color: #041d57;
+    color: #d52b29;
     line-height: 1.4;
     margin-bottom: 20px;
 }
@@ -2171,11 +2188,11 @@ blockquote span {
 }
 
 .xs-single-event.event-green .xs-event-content a:not(.btn) {
-    color: black;
+    color: #003049;
 }
 
 .xs-single-event.event-green .xs-event-content a:hover {
-    color: #F15C22;
+    color: #d52b29;
 }
 
 .xs-single-event .xs-event-content a:not(.btn) {
@@ -2183,11 +2200,11 @@ blockquote span {
 }
 
 .xs-single-event .xs-event-content a:hover {
-    color: #F15C22;
+    color: #d52b29;
 }
 
 .xs-single-event.event-green .btn {
-    background-color: #F15C22;
+    background-color: #d52b29;
 }
 
 .xs-single-event.event-purple .xs-black-overlay {
@@ -2412,7 +2429,7 @@ blockquote span {
 }
 
 .xs-single-journal .entry-header span a {
-    color: #F15C22;
+    color: #d52b29;
     font-size: 1.14286em;
     display: inline-block;
     line-height: 1;
@@ -3421,6 +3438,7 @@ svg {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -3430,6 +3448,7 @@ svg {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -3690,7 +3709,7 @@ svg {
 
 .xs-feature-text-content .xs-heading .xs-title {
     font-size: 2.71429em;
-    color: #F15C22;
+    color: #d52b29;
     margin-bottom: 17px;
 }
 
@@ -3980,18 +3999,18 @@ svg {
 
 
 .colors_panel a.color-1 {
-    background: -webkit-gradient( linear, left top, right top, from(#efc94c), color-stop(0%, #efc94c), color-stop(50%, #efc94c), color-stop(50%, #00baa3), to(#00baa3));
-    background: linear-gradient( to right, #efc94c 0%, #efc94c 0%, #efc94c 50%, #00baa3 50%, #00baa3 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#efc94c), color-stop(0%, #efc94c), color-stop(50%, #efc94c), color-stop(50%, #00baa3), to(#00baa3));
+    background: linear-gradient(to right, #efc94c 0%, #efc94c 0%, #efc94c 50%, #00baa3 50%, #00baa3 100%);
 }
 
 .colors_panel a.color-2 {
-    background: -webkit-gradient( linear, left top, right top, from(#1ed670), color-stop(0%, #1ed670), color-stop(50%, #1ed670), color-stop(50%, #7255cf), to(#7255cf));
-    background: linear-gradient( to right, #1ed670 0%, #1ed670 0%, #1ed670 50%, #7255cf 50%, #7255cf 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#1ed670), color-stop(0%, #1ed670), color-stop(50%, #1ed670), color-stop(50%, #7255cf), to(#7255cf));
+    background: linear-gradient(to right, #1ed670 0%, #1ed670 0%, #1ed670 50%, #7255cf 50%, #7255cf 100%);
 }
 
 .colors_panel a.color-3 {
-    background: -webkit-gradient( linear, left top, right top, from(#ed1c24), color-stop(0%, #ed1c24), color-stop(50%, #ed1c24), color-stop(50%, #002147), to(#002147));
-    background: linear-gradient( to right, #ed1c24 0%, #ed1c24 0%, #ed1c24 50%, #002147 50%, #002147 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#ed1c24), color-stop(0%, #ed1c24), color-stop(50%, #ed1c24), color-stop(50%, #002147), to(#002147));
+    background: linear-gradient(to right, #ed1c24 0%, #ed1c24 0%, #ed1c24 50%, #002147 50%, #002147 100%);
 }
 
 .xs-banner-inner-section {
@@ -4038,7 +4057,7 @@ svg {
 }
 
 .badge-primary {
-    background-color: #F15C22;
+    background-color: #d52b29;
 }
 
 .xs-blog-post-details {
@@ -4813,7 +4832,7 @@ svg {
 }
 
 .color-navy-blue {
-    color: #F15C22;
+    color: #d52b29;
 }
 
 .color-aqua {
@@ -4825,7 +4844,7 @@ svg {
 }
 
 .color-green {
-    color: #F15C22;
+    color: #d52b29;
 }
 
 .color-light-red {
@@ -4861,7 +4880,7 @@ svg {
 }
 
 .color-yellow {
-    color: white;
+    color: #d52b29;
 }
 
 .bg-gray {
@@ -4873,7 +4892,7 @@ svg {
 }
 
 .bg-navy-blue {
-    background-color: #F15C22;
+    background-color: #d52b29;
 }
 
 .bg-aqua {
@@ -4881,7 +4900,7 @@ svg {
 }
 
 .bg-navy-blue {
-    background-color: #F15C22;
+    background-color: #d52b29;
 }
 
 .bg-white {
@@ -4893,7 +4912,7 @@ svg {
 }
 
 .bg-light-red {
-    background-color: #F15C22;
+    background-color: #d52b29;
 }
 
 .bg-purple {
@@ -5020,12 +5039,12 @@ h3 {
 .xs-post-title,
 .xs-list-with-content li,
 .venue h4 {
-    color: #F15C22;
+    color: #d52b29;
     transition: all 0.4s ease;
 }
 
 .xs-round-nav {
-    background-color: #F15C22;
+    background-color: #d52b29;
     transition: all 0.4s ease;
 }
 
@@ -5047,12 +5066,12 @@ h3 {
 .xs-contact-details .xs-social-list-v2 li a {
     width: 40px;
     height: 40px;
-    line-height: 40px;
-    border: none;
-    background-color: #F15C22;
-    font-size: 1em;
+    line-height: 38px;
+    border: 1px solid #d52b29;
+    background-color: transparent;
+    font-size: 16px;
 }
 
 .xs-contact-details .xs-social-list-v2 li a:hover {
-    background-color: black;
+    background-color: #003049;
 }

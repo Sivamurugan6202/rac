@@ -18,7 +18,7 @@
                     <h3 class="widget-title">Quick Links</h3>
                     <ul class="xs-footer-list">
                         <li><a href="dis-about.php">About us</a></li>
-                        <li><a href="dis-directory.php">Cabinet</a></li>
+                        <li><a href="dis-directory.php">Council Members</a></li>
                         <li><a href="dis-trainer.php">Trainers</a></li>
                         <li><a href="dis-clubs.php">Clubs</a></li>
                         <li><a href="dis-gallery.php">Gallery</a></li>
@@ -38,7 +38,7 @@
                             </div>
                         </li>
                         <li><i class="fa fa-phone"></i>
-                            +91 97899 01034
+                            <a href="tel:+91 97899 01034"> +91 97899 01034</a>
                         </li>
                         <li><i class="fa fa-envelope-o"></i><a href="mailto:rdo3201.secretariat2122@gmail.com"><span class="__cf_email__" data-cfemail="11687e64637f707c7451757e7c70787f3f727e7c">rdo3201.secretariat2122@gmail.com</span></a>
                         </li>

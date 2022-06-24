@@ -131,6 +131,7 @@
 
         .xs-top-bar a {
             font-size: 14px !important;
+            font-weight: 500;
         }
 
         .xs-top-bar .xs-top-social li a i {
@@ -138,11 +139,11 @@
         }
 
         .xs-top-bar .xs-top-social li a:hover {
-            color: #EE6453;
+            color: #d52b29;
         }
 
         .xs-top-bar a:hover {
-            color: #EE6453;
+            color: #d52b29;
         }
 
         @media(max-width:1286px) {
@@ -189,7 +190,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-6 ">
-                                <img class="top-logo" src="assets/images/dis_header/L2.png" alt="">
+                                <img class="top-logo" src="assets/images/dis_header/L2.png" alt="" style="margin-left: 15px;">
                             </div>
                             <div class="col-lg-3">
                                 <a class="nav-brand" href="index.php">
@@ -206,12 +207,11 @@
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <ul class="nav-menu" style="text-align:center;">
-                                <li><a href="index.php">Home</a>
-                                </li>
+                                <li><a href="index.php">Home</a></li>
                                 <li><a href="dis-about.php">About</a></li>
                                 <li><a>Team</a>
                                     <ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
-                                        <li class=""><a href="dis-directory.php">Cabinet</a></li>
+                                        <li class=""><a href="dis-directory.php">Council Members</a></li>
                                         <li class=""><a href="dis-trainer.php">Trainers</a></li>
                                     </ul>
                                 </li>
@@ -221,8 +221,12 @@
                                     <li><a href="dis-community.php">Community</a></li>
                                 </ul> -->
                                 </li>
-                                <li><a href="dis-gallery.php">Gallery</a>
-
+                                <li><a>District Initiatives</a>
+                                    <ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
+                                        <li class=""><a href="dis-gallery.php">Gallery</a>
+                                        <li class=""><a href="dis-trainer.php">Trainers</a></li>
+                                    </ul>
+                                </li>
                                 </li>
                                 <li><a href="dis-contact.php">Contact</a></li>
                             </ul>

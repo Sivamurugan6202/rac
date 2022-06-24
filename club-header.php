@@ -26,11 +26,8 @@ $cbs = $cb->getClubWCid(isset($_GET['cid']) ? $_GET['cid'] : $_COOKIE['cid']);
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-
     <link rel="stylesheet" href="assets/css/plugins.css" />
-
     <link rel="stylesheet" href="assets/css/style.css">
-
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel='stylesheet alternate' title='color-1' type='text/css' href='assets/css/colors/color-1.css'>
     <link rel='stylesheet alternate' title='color-2' type='text/css' href='assets/css/colors/color-2.css'>
@@ -47,14 +44,19 @@ $cbs = $cb->getClubWCid(isset($_GET['cid']) ? $_GET['cid'] : $_COOKIE['cid']);
             </div>
             <div class="nav-menus-wrapper row">
                 <div class="xs-logo-wraper col-lg-2 xs-padding-0">
-                    <a class="nav-brand" href="club-index.php?cid=<?php echo $_COOKIE['cid']?>" style="padding-top:5px;">
+                    <a class="nav-brand" href="club-index.php?cid=<?php echo $_COOKIE['cid'] ?>" style="padding-top:5px;">
                         <img src="assets/images/club_logo/<?php echo isset($cbs->logo) ? $cbs->logo : 'rtrlogo1.png'; ?>" height="100px" width="120px">
                     </a>
                 </div>
                 <div class="col-lg-7">
                     <ul class="nav-menu">
                         <li><a href="./club-index.php?cid=<?php echo $_COOKIE['cid']; ?>">Home</a></li>
-                        <li><a href="club-about.php">about us</a></li>
+                        <li><a href="club-about.php">About us</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="club-about.php">About us</a></li>
+                                <li><a href="club-wall.php">Club Wall</a></li>
+                            </ul>
+                        </li>
                         <li><a href="club-ongoing-events.php">Events</a>
                             <ul class="nav-dropdown">
                                 <li><a href="dis-event.php">District Events</a></li>

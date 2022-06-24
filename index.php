@@ -125,9 +125,9 @@ $sliders = $trainer->getSliders();
 
     .technology-block .inner-box {
         position: relative;
-        padding: 45px 15px;
+        padding: 30px 10px;
         text-align: center;
-        border-radius: 10px;
+        border-radius: 30px;
         border: 1px dashed rgba(255, 255, 255, 0.60);
         transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
@@ -148,7 +148,7 @@ $sliders = $trainer->getSliders();
 
     .technology-block .inner-box .icon-box {
         position: relative;
-        color: #0060ff;
+        color: #d52b29;
         font-size: 64px;
         line-height: 1em;
         transition: all 0.3s ease;
@@ -164,7 +164,7 @@ $sliders = $trainer->getSliders();
 
     .technology-block .inner-box h6 {
         position: relative;
-        color: #ffffff;
+        color: #d52b29;
         margin-top: 18px;
         font-size: 18px;
         text-transform: uppercase;
@@ -176,16 +176,16 @@ $sliders = $trainer->getSliders();
     }
 
     .technology-block .inner-box:hover {
-        border-color: #ffffff;
-        background-color: #ffffff;
+        border-color: #f9f9f9;
+        background-color: #f9f9f9;
     }
 
     .technology-block .inner-box:hover .icon-box {
-        color: #0060ff;
+        color: #003049;
     }
 
     .technology-block .inner-box:hover h6 {
-        color: #000055;
+        color: #003049;
     }
 
     .technology-section.style-two .technology-block {
@@ -443,26 +443,15 @@ $sliders = $trainer->getSliders();
 
     <section class="xs-welcome-slider">
         <div class="xs-banner-slider owl-carousel">
-            <div class="xs-welcome-content" style="background-image: url(./assets/images/dist_sliders/slider1_dis.jpg);">
-                <div class="container row">
-                    <div class="xs-welcome-wraper banner-verion-2 color-white col-md-8 content-left offset-xl-4 col-xl-12">
-                        <h2 style="margin-left: 70px;">MAKE AN IMPACT</h2>
-                        <div class="xs-btn-wraper">
-                            <a href="user-admin/index.html" target="_blank" class="btn btn-primary" style="margin-left: 70px;">
-                                <span class="badge"></span> Login
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="xs-black-overlay"></div>
-            </div>
             <?php foreach ($sliders as $slide) : ?>
                 <div class="xs-welcome-content" style="background-image: url(assets/images/dist_sliders/<?php echo $slide->name; ?>);">
                     <div class="container row">
-                        <div class="xs-welcome-wraper banner-verion-2 color-white col-md-8 content-left">
-                            <h2 style="margin-left: 70px;">MAKE AN IMPACT</h2>
+                        <div class="xs-welcome-wraper banner-verion-2 color-white col-md-10 content-left">
+                            <h2>CELEBRATE ROTARACT</h2>
+                        </div>
+                        <div class="xs-welcome-wraper banner-verion-2 color-white col-md-2 content-left">
                             <div class="xs-btn-wraper">
-                                <a href="user-admin/index.html" target="_blank" class="btn btn-primary" style="margin-left: 70px;">
+                                <a href="user-admin/index.html" target="_blank" class="btn btn-primary">
                                     <span class="badge"></span> Login
                                 </a>
                             </div>
