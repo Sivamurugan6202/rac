@@ -13,11 +13,11 @@ $clubs = new Club;
 
 if (isset($_GET['uid'])) {
    $club = $clubs->getClub($_GET['uid']);
-   $id=$_GET['uid'];
+   $id = $_GET['uid'];
 }
 
 
-    
+
 ?>
 <div class="content-page">
    <div class="container-fluid">
@@ -74,7 +74,7 @@ if (isset($_GET['uid'])) {
                                  <label for="validationTooltip02">President name :</label>
                               </div>
                               <div class="col-lg-9">
-                                 <input type="text" value="<?php echo isset($club->president_name)?$club->president_name:""; ?>" class="form-control" name="president_name" id="validationTooltip02"  required>
+                                 <input type="text" value="<?php echo isset($club->president_name) ? $club->president_name : ""; ?>" class="form-control" name="president_name" id="validationTooltip02" required>
                               </div>
                            </div>
                         </div>
@@ -86,7 +86,7 @@ if (isset($_GET['uid'])) {
                                  <label for="validationTooltip02">Secretary name :</label>
                               </div>
                               <div class="col-lg-9">
-                                 <input type="text" value="<?php echo isset($club->cid)?$club->secretary_name:""; ?>" class="form-control" name="secretary_name" id="validationTooltip02" required>
+                                 <input type="text" value="<?php echo isset($club->cid) ? $club->secretary_name : ""; ?>" class="form-control" name="secretary_name" id="validationTooltip02" required>
                               </div>
                            </div>
                         </div>
@@ -96,9 +96,13 @@ if (isset($_GET['uid'])) {
                                  <label for="validationTooltip02">Base : </label>
                               </div>
                               <div class="col-lg-9">
-                                 <select name="base" id="<?php echo isset($club->base)?$club->base:""; ?>" class='form-control'>
-                                    <option value='community' <?php if($club->base=="community"){echo "selected";}?>>Community</option>
-                                    <option value='campus' <?php if($club->base=="campus"){echo "selected";}?>>Campus</option>
+                                 <select name="base" id="<?php echo isset($club->base) ? $club->base : ""; ?>" class='form-control'>
+                                    <option value='community' <?php if ($club->base == "community") {
+                                                                  echo "selected";
+                                                               } ?>>Community</option>
+                                    <option value='campus' <?php if ($club->base == "campus") {
+                                                               echo "selected";
+                                                            } ?>>Campus</option>
                                  </select>
                               </div>
                            </div>
@@ -109,7 +113,7 @@ if (isset($_GET['uid'])) {
                                  <label for="validationTooltip02"> Group : </label>
                               </div>
                               <div class="col-lg-9">
-                          <input type="email" value="<?php echo isset($club->groups) ? $club->groups : ""; ?>" class="form-control" name="groups" id="validationTooltip02" disabled>
+                                 <input type="email" value="<?php echo isset($club->groups) ? $club->groups : ""; ?>" class="form-control" name="groups" id="validationTooltip02" disabled>
                               </div>
                            </div>
                         </div>
@@ -139,14 +143,13 @@ if (isset($_GET['uid'])) {
                            </div>
                         </div>
                      </div>
-                    <div class="row">
-                     <div class="col-md-12 mb-3">
-                     <a href="clublist.php" class="btn btn-danger" style="margin: 10px;">Back</a>
-                     <button class='btn btn-danger' type='submit' name='submit'>Submit</button>
+                     <div class="row">
+                        <div class="col-md-12 mb-3">
+                           <a href="clublist.php" class="btn btn-info">Back</a>
+                           <input type="submit" class=" btn btn-outline-dark" name="sumbit" value="Submit">
+                        </div>
                      </div>
-                  </div>
                   </form>
-
                </div>
             </div>
          </div>

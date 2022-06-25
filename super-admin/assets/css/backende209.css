@@ -2368,6 +2368,7 @@ pre code {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
 }
 
+
 @media (prefers-reduced-motion: reduce) {
     .form-control {
         transition: none
@@ -2399,8 +2400,9 @@ pre code {
 
 .form-control:disabled,
 .form-control[readonly] {
-    background-color: #e9ecef;
-    opacity: 1
+    background-color: #bfbfbfa3;
+    opacity: 1;
+    font-weight: 600;
 }
 
 input[type="date"].form-control,
@@ -24366,7 +24368,10 @@ g[aria-describedby="id-22-description"] {
 }
 
 label {
-    color: #303030
+    color: #303030;
+    font-size: 15px;
+    padding: 5px 0px 5px 15px;
+    font-weight: 600;
 }
 
 .table td {
@@ -24377,25 +24382,67 @@ label {
     vertical-align: middle
 }
 
+
 .form-control {
     height: 45px;
     line-height: 45px;
     background: #f7f9ff;
-    border: 1px solid #deeaff;
-    font-size: 14px;
-    color: #535f6b;
+    border: 2px solid #003049;
+    font-size: 15px;
+    color: #003049;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
-    border-radius: 4px;
-    box-shadow: none
+    border-radius: 25px;
+    box-shadow: none;
+}
+
+.dark .form-control {
+    height: 45px;
+    line-height: 45px;
+    background: #00000075 !important;
+    border: 1px solid #ffffff45 !important;
+    font-size: 15px;
+    color: #d32b29 !important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 25px;
+    box-shadow: none;
+}
+
+.form-control-dropdown {
+    letter-spacing: 1.2px;
+    background: #f7f9ff;
+    font-size: 15px;
+    font-weight: 600;
+    color: #003049;
+}
+
+.dark .form-control-dropdown {
+    letter-spacing: 1.5px;
+    background: #222222;
+    font-size: 15px;
+    font-weight: 600;
+    color: #d32b29;
 }
 
 .form-control:focus {
-    color: #01041b;
-    border-color: #D91B5C;
-    box-shadow: none
+    color: #003049;
+    background-color: #fff;
+    border-color: #003049;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem #002f49bb
+}
+
+.dark .form-control:focus {
+    color: #d32b30;
+    background-color: rgba(10, 0, 0, 0.671);
+    border-color: #d32b30;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem #d32b31bb
 }
 
 .form-row {
@@ -30126,7 +30173,7 @@ button.close-popup {
 }
 
 .dark .svg-icon {
-    fill: rgba(201, 220, 255, 0.1)
+    fill: transparent
 }
 
 .mm-hotel.dark .mm-footer {

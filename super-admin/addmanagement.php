@@ -1,92 +1,86 @@
 <?php
 include('./config/init.php');
 
-include"header.php";
+include "header.php";
 
 // include("db.php");
 
 
-$management=new Management;
+$management = new Management;
 
-if(isset($_POST['sumbit']))
-{
+if (isset($_POST['sumbit'])) {
 
-//
-$file= $_FILES['file'];
-print_r($file);
-$names=[];
-    $fileName=$_FILES['file']['name'];
-    $fileTmpName=$_FILES['file']['tmp_name'];
-    $fileSize=$_FILES['file']['size'];
-    $fileError=$_FILES['file']['error'];
-    $fileType=$_FILES['file']['type'];
+   //
+   $file = $_FILES['file'];
+   print_r($file);
+   $names = [];
+   $fileName = $_FILES['file']['name'];
+   $fileTmpName = $_FILES['file']['tmp_name'];
+   $fileSize = $_FILES['file']['size'];
+   $fileError = $_FILES['file']['error'];
+   $fileType = $_FILES['file']['type'];
 
-    $fileExt=explode('.',$fileName[0]);
-    $fileActualExt=strtolower(end($fileExt));
-    print_r($fileActualExt);
-    print_r($fileError);
-    print_r($fileTmpName);
-    print_r($fileSize);
-
-
-    $allowed=['jpg','jpeg','png'];
-    if(in_array($fileActualExt,$allowed)){
-        // echo "<script>alert('heyy1!');</script>";
-
-        if($fileError[0]==0){
-            // echo "<script>alert('heyy2!'):</script>";
-
-            if($fileSize[0]<500000){
-                // echo "<script>alert('heyy!');</script>";
-                $fileNewName=uniqid('',true).".".$fileActualExt;
-                array_push($names,$fileNewName);
-                $fileDestination= '../assets/images/dist_management/'.$fileNewName;
-                move_uploaded_file($fileTmpName[0],$fileDestination);
-                echo "<script>alert('file successfully uploaded');</script>";
-            }else{
-                echo "<script>alert('Your file is too big');</script>";
-            }
-        }else{
-            echo "<script>alert('there was an error');</script>";
-        }
-    }else{
-        // echo '<script>alert("Cannot upload this type of file");</script>';
-    }
+   $fileExt = explode('.', $fileName[0]);
+   $fileActualExt = strtolower(end($fileExt));
+   print_r($fileActualExt);
+   print_r($fileError);
+   print_r($fileTmpName);
+   print_r($fileSize);
 
 
-//
+   $allowed = ['jpg', 'jpeg', 'png'];
+   if (in_array($fileActualExt, $allowed)) {
+      // echo "<script>alert('heyy1!');</script>";
 
-    echo "hi";
- $data=[];
- $data['name']=$_POST['cname'];
- $data['rid']=$_POST['rid'];
- $data['email']=$_POST['email'];
- $data['phone']=$_POST['phone'];
- $data['insta']=$_POST['insta'];
- $data['linked']=$_POST['linked'];
- $data['designation']=$_POST['designation'];
- $data['profile_pic']=$names[0];
+      if ($fileError[0] == 0) {
+         // echo "<script>alert('heyy2!'):</script>";
 
-    echo "<script>window.location.href='./managementlist.php'</script>";
+         if ($fileSize[0] < 500000) {
+            // echo "<script>alert('heyy!');</script>";
+            $fileNewName = uniqid('', true) . "." . $fileActualExt;
+            array_push($names, $fileNewName);
+            $fileDestination = '../assets/images/dist_management/' . $fileNewName;
+            move_uploaded_file($fileTmpName[0], $fileDestination);
+            echo "<script>alert('file successfully uploaded');</script>";
+         } else {
+            echo "<script>alert('Your file is too big');</script>";
+         }
+      } else {
+         echo "<script>alert('there was an error');</script>";
+      }
+   } else {
+      // echo '<script>alert("Cannot upload this type of file");</script>';
+   }
 
-    if($management->AddToManagement($data)){
-     echo "<script>alert('Added successfully');</srcipt>";
-    }else{
-        echo "ehe";
-        echo "<script>alert('Something went wrong');</script>";
-    }
-    
 
+   //
 
- 
- 
+   echo "hi";
+   $data = [];
+   $data['name'] = $_POST['cname'];
+   $data['rid'] = $_POST['rid'];
+   $data['email'] = $_POST['email'];
+   $data['phone'] = $_POST['phone'];
+   $data['insta'] = $_POST['insta'];
+   $data['linked'] = $_POST['linked'];
+   $data['designation'] = $_POST['designation'];
+   $data['profile_pic'] = $names[0];
+
+   echo "<script>window.location.href='./managementlist.php'</script>";
+
+   if ($management->AddToManagement($data)) {
+      echo "<script>alert('Added successfully');</srcipt>";
+   } else {
+      echo "ehe";
+      echo "<script>alert('Something went wrong');</script>";
+   }
 }
 
 ?>
 <div class="content-page">
    <div class="container-fluid">
       <div class="row">
-         <div class="col-sm-12 col-lg-12">              
+         <div class="col-sm-12 col-lg-12">
             <div class="card">
                <div class="card-header d-flex justify-content-between">
                   <div class="header-title">
@@ -95,9 +89,10 @@ $names=[];
                </div>
                <div class="card-body">
                   <div class="collapse" id="form-validation-4">
-                        <div class="card"><kbd class="bg-dark"><pre id="tooltip" class="text-white"></div>
+                     <div class="card"><kbd class="bg-dark">
+                           <pre id="tooltip" class="text-white"></div>
                      </div>
-                     <form  method="post" action=<?php echo $_SERVER['PHP_SELF']?> enctype="multipart/form-data">
+                     <form  method="post" action=<?php echo $_SERVER['PHP_SELF'] ?> enctype="multipart/form-data">
                         <div class="form-row">
                            <div class="col-md-6 mb-3">
                               <label for="validationTooltip01">Name</label>                             
@@ -175,10 +170,10 @@ $names=[];
                         </div>
                         <div class="row">
                            <div class="col-md-12 mb-3">
-                              <a href="managementlist.php" class="btn btn-danger" style="margin: 10px;">Back</a>
-                              <input type="submit" class=" btn btn-danger" name="sumbit" value="Submit" style="margin: 10px;">                       
+                              <a href="managementlist.php" class="btn btn-info">Back</a>
+                              <input type="submit" class=" btn btn-outline-dark" name="sumbit" value="Submit">
                            </div>
-                        </div>
+                        </div>                        
                      </form>
                   </div>
                </div>
@@ -191,5 +186,5 @@ $names=[];
 
 <?php
 
-include"footer.php";
+include "footer.php";
 ?>

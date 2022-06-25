@@ -296,12 +296,8 @@ if ($_SESSION['base_group'] == 4) {
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
-                        <div class="row" style="width: 100%;">
-                            <div class="col-lg-12 col-md-12" style="text-align: center;">
-                                <div class="header-title">
-                                    <h3 style='text-align:left'>Club Project List</h3>
-                                </div>
-                            </div>
+                        <div class="header-title">
+                            <h3 style='text-align:left'>Club Project List</h3>
                         </div>
                     </div>
                     <div class="card-body">

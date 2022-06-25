@@ -1,87 +1,84 @@
 <?php
 include('./config/init.php');
 
-include"header.php";
+include "header.php";
 
 // include("db.php");
 
 
-$trainer=new Trainers;
+$trainer = new Trainers;
 
-if($_SESSION['base_group']!=4){
+if ($_SESSION['base_group'] != 4) {
     echo "<script>alert('Sorry you dont have permission for the current request!');</script>";
     echo "<script>window.location.href='./';</script>";
     end();
 }
 
-if(isset($_POST['sumbit']))
-{
+if (isset($_POST['sumbit'])) {
 
-//
-$file= $_FILES['file'];
-$names=[];
-    $fileName=$_FILES['file']['name'];
-    $fileTmpName=$_FILES['file']['tmp_name'];
-    $fileSize=$_FILES['file']['size'];
-    $fileError=$_FILES['file']['error'];
-    $fileType=$_FILES['file']['type'];
-
-
-    $fileExt=explode('.',$fileName[0]);
-    $fileActualExt=strtolower(end($fileExt));
+    //
+    $file = $_FILES['file'];
+    $names = [];
+    $fileName = $_FILES['file']['name'];
+    $fileTmpName = $_FILES['file']['tmp_name'];
+    $fileSize = $_FILES['file']['size'];
+    $fileError = $_FILES['file']['error'];
+    $fileType = $_FILES['file']['type'];
 
 
+    $fileExt = explode('.', $fileName[0]);
+    $fileActualExt = strtolower(end($fileExt));
 
-    $allowed=['jpg','jpeg','png'];
-    if(in_array($fileActualExt,$allowed)){
+
+
+    $allowed = ['jpg', 'jpeg', 'png'];
+    if (in_array($fileActualExt, $allowed)) {
         // echo "<script>alert('heyy1!');</script>";
 
-        if($fileError[0]==0){
+        if ($fileError[0] == 0) {
             // echo "<script>alert('heyy2!'):</script>";
 
-            if($fileSize[0]<500000){
+            if ($fileSize[0] < 500000) {
                 // echo "<script>alert('heyy!');</script>";
-                $fileNewName=uniqid('',true).".".$fileActualExt;
-                array_push($names,$fileNewName);
-                $fileDestination= '../assets/images/dist_gallery/'.$fileNewName;
-                move_uploaded_file($fileTmpName[0],$fileDestination);
+                $fileNewName = uniqid('', true) . "." . $fileActualExt;
+                array_push($names, $fileNewName);
+                $fileDestination = '../assets/images/dist_gallery/' . $fileNewName;
+                move_uploaded_file($fileTmpName[0], $fileDestination);
                 // echo "<script>alert('file successfully uploaded');</script>";
-            }else{
+            } else {
                 echo "<script>alert('Your file is too big');</script>";
             }
-        }else{
+        } else {
             echo "<script>alert('there was an error');</script>";
         }
-    }else{
+    } else {
         // echo '<script>alert("Cannot upload this type of file");</script>';
     }
 
 
-//
+    //
 
- $data=[];
+    $data = [];
 
- $data['event_name']=$_POST['event_name'];
- $data['event_date']=$_POST['event_date'];
- $data['gallery']=$_POST['gallery'];
- $data['name']=$names[0];
+    $data['event_name'] = $_POST['event_name'];
+    $data['event_date'] = $_POST['event_date'];
+    $data['gallery'] = $_POST['gallery'];
+    $data['name'] = $names[0];
 
-if($trainer->addToGallery($data)){
-    echo "<script>alert('added successfully');</script>";
-    echo "<script>window.location.href='./gallery.php'</script>";
-}else{
-     echo "<script>alert('Something went wrong!');</script>";
-    echo "<script>window.location.href='./gallery.php'</script>";   
-}
- 
- 
+    if ($trainer->addToGallery($data)) {
+        echo "<script>alert('added successfully');</script>";
+        echo "<script>window.location.href='./gallery.php'</script>";
+    } else {
+        echo "<script>alert('Something went wrong!');</script>";
+        echo "<script>window.location.href='./gallery.php'</script>";
+    }
 }
 
 ?>
 <div class="content-page">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12 col-lg-12">              
+            <div class="col-sm-12 col-lg-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
@@ -90,20 +87,21 @@ if($trainer->addToGallery($data)){
                     </div>
                     <div class="card-body">
                         <div class="collapse" id="form-validation-4">
-                            <div class="card"><kbd class="bg-dark"><pre id="tooltip" class="text-white"></div>
+                            <div class="card"><kbd class="bg-dark">
+                                    <pre id="tooltip" class="text-white"></div>
                         </div>
-                        <form  method="post" action=<?php echo $_SERVER['PHP_SELF']?> enctype="multipart/form-data">
+                        <form  method="post" action=<?php echo $_SERVER['PHP_SELF'] ?> enctype="multipart/form-data">
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
                                     <label for="validationTooltip01">Event Name</label>                             
-                                    <input type="text" name="event_name" class="form-control" id="validationTooltip01" placeholder="Enter Name....." required>                                
+                                    <input type="text" name="event_name" class="form-control" id="validationTooltip01" placeholder="Enter Event Name" required>                                
                                     <div class="valid-tooltip">
                                         Looks good!
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">                              
                                     <label for="validationTooltip01">Event Date</label>                                                                
-                                    <input type="date" name="event_date" class="form-control" id="validationTooltip01" placeholder="Enter RiID....." required>                            
+                                    <input type="date" name="event_date" class="form-control" id="validationTooltip01" placeholder="Enter Date" required>                            
                                     <div class="valid-tooltip">
                                         Looks good!
                                     </div>
@@ -133,10 +131,10 @@ if($trainer->addToGallery($data)){
                             </div>
                             <div class="row">
                                 <div class="col-md-12 mb-3">
-                                    <a href="gallery.php" class="btn btn-danger" style="margin: 10px;">Back</a>
-                                    <input type="submit" class=" btn btn-danger" name="sumbit" value="Submit" style="margin: 10px;">                       
+                                    <a href="gallery.php" class="btn btn-info">Back</a>
+                                    <input type="submit" class=" btn btn-outline-dark" name="sumbit" value="Submit">
                                 </div>
-                            </div>
+                            </div>                            
                         </form>
                     </div>
                 </div>
@@ -148,5 +146,5 @@ if($trainer->addToGallery($data)){
      
 <?php
 
-include"footer.php";
+include "footer.php";
 ?>
