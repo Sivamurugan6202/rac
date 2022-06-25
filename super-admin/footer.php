@@ -77,6 +77,16 @@
         color: #fff;
     }
 
+    @media only screen and (max-width: 1300px) {
+        .wrapper-menu {
+            color: #d32b29;
+        }
+
+        .dark .wrapper-menu {
+            color: #003049;
+        }
+    }
+
     @media only screen and (max-width: 580px) {
         .xs-back-to-top-wraper {
             display: none;
@@ -85,14 +95,6 @@
         .xs-copyright {
             padding: 10px 0px 50px 0;
             font-size: 13px;
-        }
-
-        .wrapper-menu {
-            color: #d32b29;
-        }
-
-        .dark .wrapper-menu {
-            color: #003049;
         }
 
     }

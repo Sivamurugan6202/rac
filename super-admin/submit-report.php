@@ -1,7 +1,8 @@
 
 
-<?php 
+<?php
 include("./config/init.php");
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -13,31 +14,30 @@ require 'vendor/autoload.php';
 $mail = new PHPMailer(true);
 
 
-$proj=new Project;
-$clubs=new Club;
-$pdf= new rtrPDF;
-$meeting= new Meeting;
+$proj = new Project;
+$clubs = new Club;
+$pdf = new rtrPDF;
+$meeting = new Meeting;
 
-if(!isset($_GET['cid'])){
- echo "<script>alert('Something went wrong..');</script>";
- echo "<script>window.location.href='./report.php';</script>";
- die('error');
-    
+if (!isset($_GET['cid'])) {
+    echo "<script>alert('Something went wrong..');</script>";
+    echo "<script>window.location.href='./report.php';</script>";
+    die('error');
 }
-    $cid=$_GET['cid'];
-    $month=$_GET['month'];
-    // echo $cid,$month;
-    $count=$proj->getMonthCount($cid,$prevMonthName);
-    $projects=$proj->getMonthBaseReport($cid,$prevMonthName);
-    $club=$clubs->getClubWCid($cid);
-    $meetings= $meeting->getMonthBaseReport($cid,$prevMonthName);
-    // echo "<pre>";
-    // print_r($projects);
-    // print_r($meetings);
-    // echo "</pre>";
+$cid = $_GET['cid'];
+$month = $_GET['month'];
+// echo $cid,$month;
+$count = $proj->getMonthCount($cid, $prevMonthName);
+$projects = $proj->getMonthBaseReport($cid, $prevMonthName);
+$club = $clubs->getClubWCid($cid);
+$meetings = $meeting->getMonthBaseReport($cid, $prevMonthName);
+// echo "<pre>";
+// print_r($projects);
+// print_r($meetings);
+// echo "</pre>";
 
 
-if(empty($projects)){
+if (empty($projects)) {
     echo "<script>window.location.href='./dashboard.php';</script>";
 }
 
@@ -47,12 +47,12 @@ $mpdf = new \Mpdf\Mpdf([
     'setAutoTopMargin' => 'stretch',
     'autoMarginPadding' => 2
 ]);
-$mpdf->setHeader("<img src='../assets/images/user_header/pdf-header.png'}/>");
+$mpdf->setHeader("<img src='./assets/images/pdf-header.png'}/>");
 $mpdf->setFooter('Page : {PAGENO}');
 
-$dd1=explode(' ',$count->pdate);
-$dd1=explode('-',$dd1[0]);
-$dd1=$dd1[2].'-'.$dd1[1].'-'.$dd1[0];
+$dd1 = explode(' ', $count->pdate);
+$dd1 = explode('-', $dd1[0]);
+$dd1 = $dd1[2] . '-' . $dd1[1] . '-' . $dd1[0];
 
 
 $mpdf->WriteHTML("<html>
@@ -233,13 +233,13 @@ $mpdf->WriteHTML("<html>
 $mpdf->AddPage();
 
 
-foreach($projects as $project){
-        $d1=dateFix($project->from_date);
-        $c1=dashReplace($project->avenue);
-        $pwt=ucfirst($project->project_with);
+foreach ($projects as $project) {
+    $d1 = dateFix($project->from_date);
+    $c1 = dashReplace($project->avenue);
+    $pwt = ucfirst($project->project_with);
 
 
-$mpdf->WriteHTML("<html>
+    $mpdf->WriteHTML("<html>
                     <style>
                         h1{
                             padding-top: 20px;
@@ -312,15 +312,15 @@ $mpdf->WriteHTML("<html>
                         </div>
                     </body>
                     </html>");
-$mpdf->AddPage();
+    $mpdf->AddPage();
 }
 
 
- foreach($meetings as $key=>$meet){
-          $d1=dateFix($meet->post_date);
-          $m1=dashReplace($meet->meetingtype);
+foreach ($meetings as $key => $meet) {
+    $d1 = dateFix($meet->post_date);
+    $m1 = dashReplace($meet->meetingtype);
 
-$mpdf->WriteHTML("<html>
+    $mpdf->WriteHTML("<html>
                     <style>
                         h1{
                             padding-top: 20px;
@@ -377,7 +377,7 @@ $mpdf->WriteHTML("<html>
                         </div>
                     </body>
                     </html>");
-$mpdf->AddPage();
+    $mpdf->AddPage();
 }
 
 $mpdf->WriteHTML("<html><body>
@@ -386,11 +386,11 @@ $mpdf->WriteHTML("<html><body>
 
 
 
-$cb_name=explode(' ',$club->name);
-$cb_name=implode('_',$cb_name);
+$cb_name = explode(' ', $club->name);
+$cb_name = implode('_', $cb_name);
 
-$filename="{$cb_name}_{$prevMonthName}_Month_Report_2021-22.pdf";
-$mpdf->Output($filename,'F');
+$filename = "{$cb_name}_{$prevMonthName}_Month_Report_2021-22.pdf";
+$mpdf->Output($filename, 'F');
 // unlink($filename);
 
 
@@ -399,48 +399,43 @@ $mpdf->Output($filename,'F');
 
 try {
     // echo "<script>console.log('hii');</script>";
-    $mail->SMTPDebug = 0;                      
-    $mail->isSMTP();                                          
-    $mail->Host       = 'smtp.hostinger.com';                
-    $mail->SMTPAuth   = true;                                
-    $mail->Username   = 'info@rotaract3201.org';              
-    $mail->Password   = 'Rotaract@3201';                              
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          
-    $mail->Port       = 465;                             
+    $mail->SMTPDebug = 0;
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.hostinger.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'info@rotaract3201.org';
+    $mail->Password   = 'Rotaract@3201';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
 
     //Recipients
     $mail->setFrom('info@rotaract3201.org', $club->name);
     $mail->addAddress($club->email);
     $mail->addAddress($club->grp_email);
     $mail->addAddress($club->rtr_email);
-    
-    $mail->addAddress('rtrarshad3201@gmail.com', 'Arshad');     
-    $mail->addAddress('rdo3201.secretariat2122@gmail.com',);              
+
+    $mail->addAddress('rtrarshad3201@gmail.com', 'Arshad');
+    $mail->addAddress('rdo3201.secretariat2122@gmail.com',);
 
 
-    $mail->addAttachment($filename, $filename);  
+    $mail->addAttachment($filename, $filename);
 
-    $mail->isHTML(true);                                 
+    $mail->isHTML(true);
     $mail->Subject = 'Month report';
     $mail->Body    = "Dear District Secretariat,<br>
                         <br>
                     Please find the attachment of the {$count->month} Month Report for the Rotary Year 2021-2022.<br><br>Let's Together Make An Impact!<br><br> Regards,<br> Rotaract Club of {$club->name}";
     // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-    if($mail->send()){
+    if ($mail->send()) {
         $proj->updateStatus($count->id);
         echo "<script>alert('Successful');</script>";
         echo "<script>window.location.href='./viewclubreport.php?cid={$club->cid}';</script>";
         unlink($filename);
-    }else{
-                echo "<script>alert('Something went wrong');</script>";
+    } else {
+        echo "<script>alert('Something went wrong');</script>";
     }
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-
-
-
-
-

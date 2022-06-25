@@ -94,6 +94,15 @@
                                 <span class="ml-2">Club Projects</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="noproject.php">
+                                <i><svg class="svg-icon" id="mm-form-2" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                    </svg>
+                                </i>
+                                <span class="ml-2">Number of Projects</span>
+                            </a>
+                        </li>
 
                         <li>
                             <a href="memberlist.php">
@@ -141,7 +150,7 @@
                             </li>
                             <li>
                                 <a href="slider.php">
-                                    <i><svg class="svg-icon" id="mm-icon-1-1" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+                                    <i><svg class="svg-icon" id="mm-icon-1-2" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
                                             <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                                             <polyline points="2 17 12 22 22 17"></polyline>
                                             <polyline points="2 12 12 17 22 12"></polyline>
@@ -152,7 +161,7 @@
                             </li>
                             <li>
                                 <a href="gallery.php">
-                                    <i><svg class="svg-icon" id="mm-icon-1" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <i><svg class="svg-icon" id="mm-icon-2" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                         </svg>
                                     </i>
@@ -161,7 +170,7 @@
                             </li>
                             <li>
                                 <a href="sponsor.php">
-                                    <i><svg class="svg-icon" id="mm-table-1-2" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <i><svg class="svg-icon" id="mm-table-1-3" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                             <rect x="4" y="4" width="16" height="16" rx="2" />
                                             <line x1="4" y1="10" x2="20" y2="10" />
@@ -175,7 +184,7 @@
 
                         <li>
                             <a href="bloodlist.php">
-                                <i><svg class="svg-icon" id="mm-app-1" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <i><svg class="svg-icon" id="mm-app-2" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                                     </svg>
                                 </i>
@@ -185,7 +194,7 @@
 
                         <li>
                             <a href="report.php">
-                                <i><svg class="svg-icon" id="mm-chat-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <i><svg class="svg-icon" id="mm-chat-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                                     </svg>
                                 </i>
@@ -238,7 +247,7 @@
                     <div class="navbar-nav navbar-list align-items-center">
                         <div class="nav-item nav-icon dropdown">
                             <a href="#" class="nav-item nav-icon dropdown-toggle pr-2 search-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="assets/images/user/impact.png" class="img-fluid avatar-rounded" alt="user" style="height: 50px;margin-left: 15px; background:white; border-radius:10px;">
+                                <img src="assets/images/logo.png" class="img-fluid avatar-rounded" alt="user" style="height: 50px;margin-left: 15px; background:white; border-radius:10px;">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                 <li class="dropdown-item d-flex svg-icon">
