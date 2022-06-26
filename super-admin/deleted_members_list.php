@@ -3,7 +3,7 @@ include("./config/init.php");
 include "header.php";
 $member = new Members;
 echo $_SESSION['base_group'];
-if ($_SESSION['base_group'] == 4) {
+if ($_SESSION['base_group'] == 5) {
    $members = $member->getDeletedMembers();
 } else {
    $members = $member->getGroupBased($_SESSION['base_group']);
@@ -19,7 +19,7 @@ if ($_SESSION['base_group'] == 4) {
                   <div class="row" style="width: 100%;">
                      <div class="col-lg-12 col-md-12" style="text-align: left;">
                         <div class="header-title">
-                           <h4 class="card-title">Dashboard / Memberlist / Deleted Members / Deleted Members List</h4>
+                           <h4 class="card-title">Memberlist / Deleted Members / Deleted Members List</h4>
                         </div>
                      </div>
                   </div>

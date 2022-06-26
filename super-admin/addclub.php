@@ -12,11 +12,11 @@ include('./config/init.php');
 include "header.php";
 $club = new Club;
 
-if ($_SESSION['base_group'] != 4) {
-   echo "<script>alert('Sorry you dont have permission for the current request!');</script>";
-   echo "<script>window.location.href='./';</script>";
-   end();
-}
+// if ($_SESSION['base_group'] != 4) {
+//    echo "<script>alert('Sorry you dont have permission for the current request!');</script>";
+//    echo "<script>window.location.href='./';</script>";
+//    end();
+// }
 if (isset($_POST['submit'])) {
    $data = [];
    $data['name'] = $_POST['cname'];
@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
             <div class="card">
                <div class="card-header d-flex justify-content-between">
                   <div class="header-title">
-                     <h4 class="card-title">Dashboard / Club / Add Club</h4>
+                     <h4 class="card-title">Add Club</h4>
                   </div>
                </div>
                <div class="card-body">

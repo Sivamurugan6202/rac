@@ -1,29 +1,29 @@
-<?php 
+<?php
 include("./config/init.php");
 require_once "./vendor/autoload.php";
 
-$proj=new Project;
-$clubs=new Club;
-$pdf= new rtrPDF;
-$meeting= new Meeting;
+$proj = new Project;
+$clubs = new Club;
+$pdf = new rtrPDF;
+$meeting = new Meeting;
 
-if(!isset($_GET['cid']) || !isset($_GET['month'])){
-//  echo "<script>alert('Something went wrong..');</script>";
-//  echo "<script>window.location.href='./report.php';</script>";
-    
+if (!isset($_GET['cid']) || !isset($_GET['month'])) {
+    //  echo "<script>alert('Something went wrong..');</script>";
+    //  echo "<script>window.location.href='./report.php';</script>";
+
 }
-    $cid=$_GET['cid'];
-    $month=$_GET['month'];
-    // echo $cid,$month;
-    $count=$proj->getMonthCount($cid,$prevMonthName);
-    $projects=$proj->getMonthBaseReport($cid,$prevMonthName);
-    $club=$clubs->getClubWCid($cid);
-    $meetings= $meeting->getMonthBaseReport($cid,$month);
-    // print_r($projects);
+$cid = $_GET['cid'];
+$month = $_GET['month'];
+// echo $cid,$month;
+$count = $proj->getMonthCount($cid, $prevMonthName);
+$projects = $proj->getMonthBaseReport($cid, $prevMonthName);
+$club = $clubs->getClubWCid($cid);
+$meetings = $meeting->getMonthBaseReport($cid, $month);
+// print_r($projects);
 
 
 
-if(empty($projects)){
+if (empty($projects)) {
     // echo "<script>window.location.href='./dashboard.php';</script>";
 }
 
@@ -33,12 +33,12 @@ $mpdf = new \Mpdf\Mpdf([
     'setAutoTopMargin' => 'stretch',
     'autoMarginPadding' => 2
 ]);
-$mpdf->setHeader("<img src='../assets/images/user_header/pdf-header.png'}/>");
+$mpdf->setHeader("<img src='../assets/images/pdf-header.png'}/>");
 $mpdf->setFooter('Page : {PAGENO}');
 
-$dd1=explode(' ',$count->pdate);
-$dd1=explode('-',$dd1[0]);
-$dd1=$dd1[2].'-'.$dd1[1].'-'.$dd1[0];
+$dd1 = explode(' ', $count->pdate);
+$dd1 = explode('-', $dd1[0]);
+$dd1 = $dd1[2] . '-' . $dd1[1] . '-' . $dd1[0];
 
 
 $mpdf->WriteHTML("<html>
@@ -219,13 +219,13 @@ $mpdf->WriteHTML("<html>
 $mpdf->AddPage();
 
 
-foreach($projects as $project){
-        $d1=dateFix($project->from_date);
-        $c1=dashReplace($project->avenue);
-        $pwt=ucfirst($project->project_with);
+foreach ($projects as $project) {
+    $d1 = dateFix($project->from_date);
+    $c1 = dashReplace($project->avenue);
+    $pwt = ucfirst($project->project_with);
 
 
-$mpdf->WriteHTML("<html>
+    $mpdf->WriteHTML("<html>
                     <style>
                         h1{
                             padding-top: 20px;
@@ -298,15 +298,15 @@ $mpdf->WriteHTML("<html>
                         </div>
                     </body>
                     </html>");
-$mpdf->AddPage();
+    $mpdf->AddPage();
 }
 
 
- foreach($meetings as $key=>$meet){
-          $d1=dateFix($meet->post_date);
-          $m1=dashReplace($meet->meetingtype);
+foreach ($meetings as $key => $meet) {
+    $d1 = dateFix($meet->post_date);
+    $m1 = dashReplace($meet->meetingtype);
 
-$mpdf->WriteHTML("<html>
+    $mpdf->WriteHTML("<html>
                     <style>
                         h1{
                             padding-top: 20px;
@@ -363,7 +363,7 @@ $mpdf->WriteHTML("<html>
                         </div>
                     </body>
                     </html>");
-$mpdf->AddPage();
+    $mpdf->AddPage();
 }
 
 $mpdf->WriteHTML("<html><body>
@@ -373,6 +373,6 @@ $mpdf->WriteHTML("<html><body>
 
 
 
-$filename="{$club->name}_{$prevMonthName} Month Report_2021-22";
-$mpdf->Output($filename,'I');
+$filename = "{$club->name}_{$prevMonthName} Month Report_2021-22";
+$mpdf->Output($filename, 'I');
 unlink($filename);

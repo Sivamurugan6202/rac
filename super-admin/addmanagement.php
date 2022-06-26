@@ -84,7 +84,7 @@ if (isset($_POST['sumbit'])) {
             <div class="card">
                <div class="card-header d-flex justify-content-between">
                   <div class="header-title">
-                     <h4 class="card-title">Dashboard / Club / Add Management</h4>
+                     <h4 class="card-title">Add Management</h4>
                   </div>
                </div>
                <div class="card-body">
@@ -112,7 +112,7 @@ if (isset($_POST['sumbit'])) {
 
                            <div class="col-md-6 mb-3">
                               <label for="validationTooltip02">Email-ID</label>
-                              <input type="email"name="email" class="form-control" id="validationTooltip02" value="abc@xyz.com" required>
+                              <input type="email"name="email" class="form-control" id="validationTooltip02" placeholder="Enter Email-ID" required>
                               <div class="valid-tooltip">
                                  Please provide a valid email
                               </div>
@@ -120,7 +120,7 @@ if (isset($_POST['sumbit'])) {
 
                            <div class="col-md-6 mb-3">
                               <label for="validationTooltip02">Phone Number</label>
-                              <input type="Phone" name="phone" class="form-control"  required>
+                              <input type="Phone" name="phone" class="form-control"  placeholder="Enter Phone Number" required>
                               <div class="valid-tooltip">
                                  Please provide a valid Phone Number
                               </div>
@@ -128,7 +128,7 @@ if (isset($_POST['sumbit'])) {
 
                            <div class="col-md-6 mb-3">                           
                               <label for="validationTooltip02">Instagram ID</label>                                 
-                              <input type="Phone" name="insta" class="form-control"  required>
+                              <input type="Phone" name="insta" class="form-control" placeholder="Enter Instagram ID" required>
                               <div class="valid-tooltip">
                                  Please provide a valid Data
                               </div>
@@ -144,7 +144,7 @@ if (isset($_POST['sumbit'])) {
 
                            <div class="col-md-6 mb-3">                          
                               <label for="validationTooltip02">Linked in</label>                                 
-                              <input type="Phone" name="linked" class="form-control"  required>
+                              <input type="Phone" name="linked" class="form-control" placeholder="Enter Linked in-ID" required>
                               <div class="valid-tooltip">
                                  Please provide a valid Data
                               </div>
@@ -152,7 +152,7 @@ if (isset($_POST['sumbit'])) {
 
                            <div class="col-md-6 mb-3">                           
                               <label for="validationTooltip02">Designation</label>                                
-                              <input type="Phone" name="designation" class="form-control"  required>
+                              <input type="Phone" name="designation" class="form-control" placeholder="Enter Designation" required>
                               <div class="valid-tooltip">
                                  Please provide a valid Data
                               </div>
@@ -160,7 +160,7 @@ if (isset($_POST['sumbit'])) {
                            <div class="col-md-12 mb-3">
                               <div class="row">
                                  <div class="col-lg-3">
-                                    <label for="validationTooltip02">Profile pic</label>
+                                    <label for="validationTooltip02">Upload Image</label>
                                  </div>
                                  <div class="col-lg-9">
                                     <input type="file" name="file[]" required>

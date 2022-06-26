@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) {
             <div class="card">
                <div class="card-header d-flex justify-content-between">
                   <div class="header-title">
-                     <h4 class="card-title">Dashboard / Event / Edit Event</h4>
+                     <h4 class="card-title">Event / Edit Event</h4>
                   </div>
                </div>
                <div class="card-body">
@@ -139,8 +139,6 @@ if (isset($_POST['submit'])) {
                               Please provide a valid place.
                            </div>
                         </div>
-
-
                         <div class="col-md-6 mb-3">
                            <label for="validationTooltip03">Map location</label>
                            <input type="text" name="map_location" class="form-control" id="validationTooltip03" placeholder="Enter Your Correct Time" required value="<?php echo $event->map_location; ?>">
@@ -148,7 +146,6 @@ if (isset($_POST['submit'])) {
                               Please provide a valid place.
                            </div>
                         </div>
-
                         <div class="col-md-6 mb-3">
                            <label for="validationTooltip03">Event Chair</label>
                            <input type="text" name="event_chairman" class="form-control" id="validationTooltip03" placeholder="Enter Your Chairman Name" required value="<?php echo $event->event_chairman; ?>">
@@ -156,7 +153,6 @@ if (isset($_POST['submit'])) {
                               Please provide a valid data.
                            </div>
                         </div>
-
                         <div class="col-md-6 mb-3">
                            <label for="validationTooltip03">Event Secretary</label>
                            <input type='text' class="form-control" name='event_secretary' placeholder='Enter your secreaty name'  required value="<?php echo $event->event_secretary; ?>"/>
@@ -164,15 +160,13 @@ if (isset($_POST['submit'])) {
                               Please provide a valid data.
                            </div>
                         </div>
-
                         <div class="col-md-6 mb-3">
                            <label for="validationTooltip03">Host club</label>
                            <input type='text' class="form-control" name='host_club' placeholder='Enter your host club'  required value="<?php echo $event->host_club; ?>"/>
                            <div class="invalid-tooltip">
                               Please provide a valid data.
                            </div>
-                        </div>
-                        
+                        </div>                        
                         <div class="col-md-6 mb-3">
                            <label for="validationTooltip03">Host President</label>
                            <input type='text' class="form-control" name='host_chairman' placeholder='Enter your host club'  required value="<?php echo $event->host_chairman; ?>"/>
@@ -186,8 +180,7 @@ if (isset($_POST['submit'])) {
                            <div class="invalid-tooltip">
                               Please provide a valid data.
                            </div>
-                        </div>
-                        
+                        </div>                        
                         <div class="col-md-6 mb-3">
                            <label for="validationTooltip03">Host conveyer</label>
                            <input type='text' class="form-control" name='host_conveyer' placeholder='Enter your host club'  required value="<?php echo $event->host_conveyer; ?>"/>
@@ -195,7 +188,6 @@ if (isset($_POST['submit'])) {
                               Please provide a valid data.
                            </div>
                         </div>
-
                         <div class="col-md-6 mb-3">
                            <label for="validationTooltip03">Phone number</label>
                            <input type='text' class="form-control" name='phone' placeholder='Enter your secreaty name'  required value="<?php echo $event->phone; ?>"/>
@@ -203,7 +195,6 @@ if (isset($_POST['submit'])) {
                               Please provide a valid data.
                            </div>
                         </div>
-
                         <div class="col-md-6 mb-3">
                            <label for="validationTooltip03">Email address</label>
                            <input type='text' class="form-control" name='email' placeholder='Enter your secreaty name'  required value="<?php echo $event->email; ?>"/>

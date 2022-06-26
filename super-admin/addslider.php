@@ -5,7 +5,7 @@ include "header.php";
 
 $trainer = new Trainers;
 
-if ($_SESSION['base_group'] != 4) {
+if ($_SESSION['base_group'] != 5) {
     echo "<script>alert('Sorry you dont have permission for the current request!');</script>";
     echo "<script>window.location.href='./';</script>";
     end();
@@ -72,7 +72,7 @@ if (isset($_POST['sumbit'])) {
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
-                            <h4 class="card-title">Dashboard / Slider / Add Slider</h4>
+                            <h4 class="card-title">Add Slider</h4>
                         </div>
                     </div>
                     <div class="card-body">
@@ -85,25 +85,18 @@ if (isset($_POST['sumbit'])) {
                                 <div class="col-md-6 mb-3">
                                     <div class="row">
                                         <div class="col-lg-3">
-                                            <label for="validationTooltip02">Slider image</label>
+                                            <label for="validationTooltip02">Slider Image</label>
                                         </div>
                                         <div class="col-lg-9">
                                             <input type="file" name="file[]" required>
                                         </div>
                                     </div>
                                 </div>   
-                                 <div class="col-md-6 mb-3">
-                                    <div class="row">
-                                        <div class="col-lg-3">
-                                            <label for="validationTooltip02">Image name</label>
-                                        </div>
-                                        <div class="col-lg-9">
-                                            <input type="text" name="pic_name" required>
-                                            <p style="font-size:6">*use underscore (_) as delimemter</p>
-                                        </div>
-                                        
-                                    </div>
-                                </div>  
+                                 <div class="col-md-6 mb-3">                                    
+                                    <label for="validationTooltip02">Image Name</label>                                
+                                    <input type="text" name="pic_name" required>
+                                    <p style="font-size:6">*use underscore (_) as delimemter</p>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 mb-3">

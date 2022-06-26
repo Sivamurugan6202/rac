@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Rotaract 3201 Admin</title>
-
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets\images\rtrlogo1.png" />
     <link rel="stylesheet" href="assets/css/backend-plugin.min.css">
@@ -15,7 +14,6 @@
     <link rel="stylesheet" href="assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="assets/vendor/remixicon/fonts/remixicon.css">
     <link rel="stylesheet" href="assets/vendor/%40icon/dripicons/dripicons.css">
-
     <link rel='stylesheet' href='assets/vendor/fullcalendar/core/main.css' />
     <link rel='stylesheet' href='assets/vendor/fullcalendar/daygrid/main.css' />
     <link rel='stylesheet' href='assets/vendor/fullcalendar/timegrid/main.css' />
@@ -95,16 +93,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="noproject.php">
-                                <i><svg class="svg-icon" id="mm-form-2" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                    </svg>
-                                </i>
-                                <span class="ml-2">Number of Projects</span>
-                            </a>
-                        </li>
-
-                        <li>
                             <a href="memberlist.php">
                                 <i><svg class="svg-icon" id="mm-table-1-2" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -116,8 +104,16 @@
                                 <span class="ml-2">Membership</span>
                             </a>
                         </li>
-                        <?php if ($_SESSION['base_group'] == 4) : ?>
-
+                        <?php if ($_SESSION['base_group'] == 5) : ?>
+                            <li>
+                                <a href="noproject.php">
+                                    <i><svg class="svg-icon" id="mm-form-2" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                        </svg>
+                                    </i>
+                                    <span class="ml-2">Number of Projects</span>
+                                </a>
+                            </li>
                             <li>
                                 <a href="managementlist.php">
                                     <i><svg class="svg-icon" id="mm-icon-1" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

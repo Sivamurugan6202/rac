@@ -3,15 +3,8 @@ include "./config/init.php";
 
 include "header.php";
 // include "db.php";
-
-
-
-
-
 $club = new Club;
 $count = $club->getCount();
-
-
 // $sql=mysqli_query($conn,"UPDATE iclub SET del=1 WHERE id='$id'");
 // echo "<script>window.location.href='clublist.php'</script>";
 
@@ -139,16 +132,12 @@ $count = $club->getCount();
                             <h4 class="card-title">Club List</h4>
                         </div>
                         <div class="header-action">
-                            <i type="button" data-toggle="collapse" data-target="#datatable-1" aria-expanded="false" aria-controls="alert-1">
-                                <?php if ($_SESSION['base_group'] == 4) : ?>
-                                    <a href="addclub.php" class="btn btn-outline-dark btn-add">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                        </svg> &nbsp;Add Club
-                                    </a>
-                                <?php endif; ?>
-                            </i>
+                            <a href="addclub.php" class="btn btn-outline-dark btn-add">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                </svg> &nbsp;Add Club
+                            </a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -186,27 +175,25 @@ $count = $club->getCount();
                                                         </svg>
                                                     </button>
                                                 </a>
-                                                <?php if ($_SESSION['base_group'] == 4) : ?>
-                                                    <a href="editclub.php?uid=<?php echo $club->id; ?>">
-                                                        <button data-tooltip="Edit Club" class="btn btn-warning btn-xs" <?php if ($club->cid == '91901') {
-                                                                                                                            echo "disabled";
-                                                                                                                        } ?>>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                                                                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
-                                                            </svg>
-                                                        </button>
-                                                    </a>
-                                                    <a href="delete.php?uid=<?php echo $club->id; ?>&type=club">
-                                                        <button data-tooltip="Delete Club" class="btn btn-warning btn-xs" onClick="return confirm('Do you really want to delete');" <?php if ($club->cid == '91901') {
-                                                                                                                                                                                        echo "disabled";
-                                                                                                                                                                                    } ?>>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                                            </svg>
-                                                        </button>
-                                                    </a>
-                                                <?php endif; ?>
+                                                <a href="editclub.php?uid=<?php echo $club->id; ?>">
+                                                    <button data-tooltip="Edit Club" class="btn btn-warning btn-xs" <?php if ($club->cid == '91901') {
+                                                                                                                        echo "disabled";
+                                                                                                                    } ?>>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                        </svg>
+                                                    </button>
+                                                </a>
+                                                <a href="delete.php?uid=<?php echo $club->id; ?>&type=club">
+                                                    <button data-tooltip="Delete Club" class="btn btn-warning btn-xs" onClick="return confirm('Do you really want to delete');" <?php if ($club->cid == '91901') {
+                                                                                                                                                                                    echo "disabled";
+                                                                                                                                                                                } ?>>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                        </svg>
+                                                    </button>
+                                                </a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -219,7 +206,7 @@ $count = $club->getCount();
                             <a href="dashboard.php" class="btn btn-outline-dark">Back</a>
                         </div>
                         <div class="col-md-6 mb-3" style="text-align:right;padding-right: 45px;">
-                            <a href="meetingcsv.php" class="btn btn-info" style="width: 160px;">
+                            <a href="meetingcsv.php" class="btn btn-info btn-export">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
                                     <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z" />
                                     <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
@@ -261,7 +248,7 @@ $count = $club->getCount();
                     </svg>
                 </button>
             </a>
-            <?php if ($_SESSION['base_group'] == 4) : ?>
+            
             <a href="editclub.php?uid=${d.id}"> 
                 <button class="btn btn-warning btn-xs" ${d.cid=='91901'?"disabled":''}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
@@ -278,7 +265,7 @@ $count = $club->getCount();
                     </svg>
                 </button>
             </a>
-            <?php endif; ?>
+            
         </td>
         </tr>`;
         })

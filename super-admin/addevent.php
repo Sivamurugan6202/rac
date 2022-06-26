@@ -9,7 +9,7 @@ $event = new Event;
 $data = [];
 $names = [];
 
-if ($_SESSION['base_group'] != 4) {
+if ($_SESSION['base_group'] != 5) {
    echo "<script>alert('Sorry you dont have permission for the current request!');</script>";
    echo "<script>window.location.href='./';</script>";
    end();
@@ -37,10 +37,10 @@ function addImage($fl)
 
    $allowed = ['jpg', 'jpeg', 'png'];
    if (in_array($fileActualExt, $allowed)) {
-      // echo "<script>alert('heyy1!');</script>";
+      echo "<script>alert('heyy1!');</script>";
 
       if ($fileError[0] == 0) {
-         // echo "<script>alert('heyy2!'):</script>";
+         echo "<script>alert('heyy2!'):</script>";
 
          if ($fileSize[0] < 500000) {
             // echo "<script>alert('heyy!');</script>";
@@ -68,10 +68,12 @@ if (isset($_POST['submit'])) {
    if ($_FILES['banner']['size'][0] == 0 || $_FILES['poster']['size'][0] == 0) {
       echo "<script>alert('thereheyyy');</script>";
 
-      echo "echo <script>window.location.href='https://www.rotaract3201.org/super-admin/addevent.php'</script>";
+      echo "echo <script>window.location.href='./addevent.php'</script>";
    } else {
       $data['name'] = $_POST['name'];
       $data['xiv_rotaract'] = $_POST['xiv_rotaract'];
+      $data['date'] = $_POST['date'];
+      $data['time'] = $_POST['time'];
       $data['venue'] = $_POST['venue'];
       $data['map_location'] = $_POST['map_location'];
       $data['event_chairman'] = $_POST['event_chairman'];
@@ -80,8 +82,6 @@ if (isset($_POST['submit'])) {
       $data['host_chairman'] = $_POST['host_chairman'];
       $data['host_secretary'] = $_POST['host_secretary'];
       $data['host_conveyer'] = $_POST['host_conveyer'];
-      $data['date'] = $_POST['date'];
-      $data['time'] = $_POST['time'];
       $data['email'] = $_POST['email'];
       $data['phone'] = $_POST['phone'];
       $data['description'] = $_POST['description'];
@@ -105,7 +105,7 @@ if (isset($_POST['submit'])) {
             <div class="card">
                <div class="card-header d-flex justify-content-between">
                   <div class="header-title">
-                     <h4 class="card-title">Dashboard / Event / Add Event</h4>
+                     <h4 class="card-title">Add District Event</h4>
                   </div>
                </div>
                <div class="card-body">

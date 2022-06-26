@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
             <div class="card">
                <div class="card-header d-flex justify-content-between">
                   <div class="header-title">
-                     <h4 class="card-title">Dashboard / Club / Edit Trainer</h4>
+                     <h4 class="card-title">Edit Trainer</h4>
                   </div>
                </div>
                <div class="card-body">

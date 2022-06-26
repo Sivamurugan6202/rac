@@ -10301,7 +10301,7 @@ a.text-warning:focus {
 }
 
 .dark .text-danger-head {
-    color: #158df7 !important
+    color: #f7ad29 !important
 }
 
 .text-danger {
@@ -10315,7 +10315,7 @@ a.text-warning:focus {
 }
 
 .dark .text-danger {
-    color: #158df7 !important
+    color: #f7ad29 !important
 }
 
 .text-danger-info {
@@ -10327,7 +10327,7 @@ a.text-warning:focus {
 }
 
 .dark .text-danger-info {
-    color: #158df7 !important
+    color: #f7ad29 !important
 }
 
 .buttonDisabled {
@@ -10684,7 +10684,7 @@ a.text-skyblue:focus {
 }
 
 .dark .card-block.card-height:hover {
-    box-shadow: 7px 7px 5px 2px #158df7, inset 5px 5px 10px 2px #181818e6;
+    box-shadow: 7px 7px 5px 2px #f7ad29, inset 5px 5px 10px 2px #181818e6;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
 }
@@ -10920,7 +10920,7 @@ a.text-skyblue:focus {
 }
 
 .dark .mm-sidebar-menu .side-menu li a:hover {
-    color: #003049 !important;
+    color: #f7ad29 !important;
     font-weight: 600;
     border: 0px solid #d32b29 !important;
 }
@@ -11407,7 +11407,7 @@ a.text-skyblue:focus {
 }
 
 .dark .mm-top-navbar .dropdown-menu .dropdown-item:hover a {
-    color: #158df7 !important
+    color: #f7ad29 !important
 }
 
 .mm-top-navbar .dropdown-menu .dropdown-item:hover:before {
@@ -11417,7 +11417,7 @@ a.text-skyblue:focus {
 
 .dark .mm-top-navbar .dropdown-menu .dropdown-item:hover:before {
     transition: all 200ms ease-in-out;
-    background-color: #158df7 !important
+    background-color: #f7ad29 !important
 }
 
 .mm-top-navbar .mm-sub-dropdown {
@@ -13511,6 +13511,12 @@ fieldset:disabled a.btn {
     background-color: #003049;
     border-color: #003049;
     margin: 10px 0 0 10px;
+    padding: 12px 20px;
+}
+
+.btn-export {
+    width: 150px;
+    padding: 9px !important;
 }
 
 .btn-info:hover {
@@ -13525,6 +13531,7 @@ fieldset:disabled a.btn {
     background-color: #d32b30;
     border-color: #d32b30;
     margin: 10px 0 0 10px;
+    padding: 12px 20px;
 }
 
 .dark .btn-info:hover {
@@ -16317,15 +16324,16 @@ table.dataTable.no-footer {
     background: #fff;
     border-radius: 4px;
     padding: 6px 4px;
-    border-color: #003049 !important
+    border-color: #003049 !important;
+    color: #003049;
 }
 
 .dark .dataTables_wrapper .dataTables_length select {
-    color: #fff;
+    color: #d32b29;
     background-color: #252525 !important;
     border-radius: 4px;
     padding: 6px 4px;
-    border-color: #d32b29 !important
+    border-color: #d32b29 !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
@@ -24274,7 +24282,7 @@ g[aria-describedby="id-22-description"] {
 }
 
 .dark .svg-icon .mr-0 {
-    Color: #158df7
+    Color: #f7ad29
 }
 
 .svg-icon {
@@ -29687,11 +29695,11 @@ button.close-popup {
 }
 
 .dark .dropdown-menu .dropdown-item:hover {
-    background-color: rgba(71, 136, 255, 0.1)
+    background-color: transparent
 }
 
 .dark .dropdown-menu .dropdown-item:focus {
-    background-color: rgba(71, 136, 255, 0.1)
+    background-color: transparent
 }
 
 .dark .dropdown-menu .dropdown-divider {
@@ -29780,7 +29788,7 @@ button.close-popup {
 }
 
 .dark .dataTables_wrapper .dataTables_filter input {
-    color: #158df7;
+    color: #f7ad29;
     border-color: #d32b29;
 }
 
@@ -31268,25 +31276,27 @@ body.mm-hotel.header-style-1 .main-circle i {
 
 [data-tooltip]::after {
     position: absolute;
-    width: 100px;
+    width: 110px;
     left: calc(25% - 70px);
     bottom: 125%;
     text-align: center;
     box-sizing: border-box;
-
     content: attr(data-tooltip);
     color: #fff;
-    background: black;
+    background: #d32b29;
     padding: 8px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
-
     visibility: hidden;
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s, transform 0.2s;
 
+}
+
+.dark [data-tooltip]::after {
+    background: #003049;
 }
 
 [data-tooltip]:hover::after {

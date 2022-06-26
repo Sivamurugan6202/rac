@@ -3,7 +3,7 @@ include("./config/init.php");
 include "header.php";
 $member = new Members;
 echo $_SESSION['base_group'];
-if ($_SESSION['base_group'] == 4) {
+if ($_SESSION['base_group'] == 5) {
    $members = $member->getDelReq();
 } else {
    echo "window.location.redirect='./'";
@@ -20,7 +20,7 @@ if ($_SESSION['base_group'] == 4) {
                   <div class="row" style="width: 100%;">
                      <div class="col-lg-9 col-md-9" style="text-align: left;">
                         <div class="header-title">
-                           <h4 class="card-title">Dashboard / Memberlist / Deleted Members</h4>
+                           <h4 class="card-title">Memberlist / Deleted Members</h4>
                         </div>
                      </div>
                      <div class="col-md-3 mb-3">

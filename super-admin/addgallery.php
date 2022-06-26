@@ -8,7 +8,7 @@ include "header.php";
 
 $trainer = new Trainers;
 
-if ($_SESSION['base_group'] != 4) {
+if ($_SESSION['base_group'] != 5) {
     echo "<script>alert('Sorry you dont have permission for the current request!');</script>";
     echo "<script>window.location.href='./';</script>";
     end();
@@ -82,7 +82,7 @@ if (isset($_POST['sumbit'])) {
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
-                            <h4 class="card-title">Dashboard / Gallery / Add gallery</h4>
+                            <h4 class="card-title">Add Gallery</h4>
                         </div>
                     </div>
                     <div class="card-body">
@@ -118,15 +118,9 @@ if (isset($_POST['sumbit'])) {
                                     </select>                           
                                 </div>
                                 
-                                <div class="col-md-12 mb-3">
-                                    <div class="row">
-                                        <div class="col-lg-3">
-                                            <label for="validationTooltip02">Gallery pic</label>
-                                        </div>
-                                        <div class="col-lg-9">
-                                            <input type="file" name="file[]" required>
-                                        </div>
-                                    </div>
+                                <div class="col-md-12 mb-3">                                   
+                                    <label for="validationTooltip02">Gallery Image :</label>                                
+                                    <input type="file" name="file[]" required>                                        
                                 </div>                            
                             </div>
                             <div class="row">

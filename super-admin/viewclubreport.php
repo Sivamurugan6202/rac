@@ -297,7 +297,7 @@ $meetings = $meeting->getMonthBaseReport($cid, $prevMonthName);
                                 </div>
                             </div>
                             <div class="col-md-3" style="margin-top: 10px;text-align: center;">
-                                <div class="header-action" style="margin-left: 30px">
+                                <div class="header-action">
                                     <a href="oldreport.php?cid=<?php echo $cid ?>" class="btn btn-outline-dark" style="width: 120px;">
                                         Old Report
                                     </a>
@@ -358,7 +358,7 @@ $meetings = $meeting->getMonthBaseReport($cid, $prevMonthName);
                             <a href="report.php" class="btn btn-outline-dark">Back</a>
                         </div>
                         <div class="col-md-6 mb-3" style="text-align:right;padding-right: 45px;">
-                            <?php if ($_SESSION['base_group'] == 4) : ?>
+                            <?php if ($_SESSION['base_group'] == 5) : ?>
                                 <button data-id='<?php echo $count->id; ?>' onclick="rejectFunc(this)" class="btn btn-info" <?php if ($count->status) {
                                                                                                                                 echo "disabled";
                                                                                                                             } ?>>Reject</button>
