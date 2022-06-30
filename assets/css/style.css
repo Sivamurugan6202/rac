@@ -639,10 +639,10 @@ a.xs-post-title:hover {
 .xs-social-list-v2 li a {
     width: 40px;
     height: 40px;
-    line-height: 36px;
+    line-height: 38px;
     border: 1px solid #d52b29;
     background-color: transparent;
-    font-size: 1em;
+    font-size: 17px;
 }
 
 .xs-social-list-v2 li a:hover {
@@ -666,7 +666,7 @@ a.xs-post-title:hover {
 }
 
 .xs-round-nav:hover {
-    background-color: #041d57;
+    background-color: #003049 !important;
 }
 
 .xs-square-nav {
@@ -755,8 +755,9 @@ blockquote span {
     background-color: #d52b29;
     text-align: center;
     color: #fff;
-    font-size: 1.14286em;
+    font-size: 18px;
     margin-right: 20px;
+    border-radius: 25px;
 }
 
 .xs-info-list i.bg-red {
@@ -788,7 +789,7 @@ blockquote span {
 }
 
 .xs-info-list a {
-    margin-top: 8px;
+    margin-top: 0px;
     margin-bottom: 0;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
@@ -820,12 +821,13 @@ blockquote span {
     height: 50px;
     line-height: 50px;
     background-color: #d52b29 !important;
-    color: #fff;
+    color: #fff !important;
     text-align: center;
     display: inline-block;
-    font-size: 1.78571em;
+    font-size: 25px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    border-radius: 20px;
 }
 
 .xs-back-to-top:hover {
@@ -1132,6 +1134,7 @@ blockquote span {
     background-color: #003049;
     /*position: relative;*/
     overflow: hidden;
+    display: none;
 }
 
 .xs-top-bar.top-bar-second .xs-top-bar-mail {
@@ -1221,12 +1224,15 @@ blockquote span {
 }
 
 .xs-header.xs-fullWidth {
-    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
     position: fixed;
-    z-index: 2;
+    z-index: 99 !important;
     background: #fff;
     width: 100%;
+    -webkit-animation-duration: 1.25s;
+    animation-duration: 1.25s;
+    height: 18%;
 }
 
 .xs-header.xs-fullWidth .nav-brand {
@@ -1243,6 +1249,11 @@ blockquote span {
 
 .xs-header.xs-fullWidth .nav-menu li {
     float: none;
+}
+
+.xs-header.xs-fullWidth .nav-menu .nav-submenu li {
+    float: none;
+    border-bottom: 1px solid #f1f1f1;
 }
 
 .xs-header.xs-fullWidth .nav-menu li a {
@@ -1267,7 +1278,6 @@ blockquote span {
 
 .xs-menus.xs_nav-landscape .nav-submenu li a {
     padding: 12px 20px;
-    border-bottom: 1px solid #f1f1f1;
     color: #050c24;
     background-color: transparent;
     -webkit-transition: all 0.4s ease;
@@ -1277,6 +1287,8 @@ blockquote span {
 .xs-menus.xs_nav-landscape .nav-submenu li a:hover {
     color: #d52b29;
     margin-left: 5px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 .xs-menus.xs_nav-landscape .nav-submenu li:last-child a {
@@ -1292,7 +1304,7 @@ blockquote span {
 }
 
 .xs-welcome-content {
-    min-height: 700px;
+    min-height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -2192,11 +2204,11 @@ blockquote span {
 }
 
 .xs-single-event.event-green .xs-event-content a:hover {
-    color: #d52b29;
+    color: #fff;
 }
 
 .xs-single-event .xs-event-content a:not(.btn) {
-    color: black;
+    color: #003049;
 }
 
 .xs-single-event .xs-event-content a:hover {
@@ -2359,8 +2371,8 @@ blockquote span {
 }
 
 .xs-single-journal .xs-separetor {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
     background-color: #f3f3f3;
 }
 
@@ -2504,13 +2516,13 @@ blockquote span {
 }
 
 .xs-footer-top-layer {
-    padding-top: 110px;
-    padding-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .xs-copyright {
-    padding: 35px 0;
-    border-top: 1px solid #343e4e;
+    padding: 15px 0;
+    border-top: 2px solid #343e4e;
 }
 
 .xs-footer-logo {
@@ -3726,6 +3738,34 @@ svg {
     height: 2px;
 }
 
+.xs-feature-image-box-app {
+    max-width: 150%;
+    width: 140%;
+    box-shadow: none;
+    border-radius: 0px;
+    margin-top: 25px;
+}
+
+.xs-feature-text-content .xs-heading .xs-title-app {
+    font-size: 2.71429em;
+    color: #F15C22;
+    margin-bottom: 35px;
+    text-align: right;
+    font-weight: 700;
+}
+
+.xs-feature-text-content .xs-heading .xs-title-p {
+    font-size: 20px;
+    color: #777;
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.xs-feature-image-box-qr img {
+    border-radius: 20px;
+    width: 25%;
+}
+
 .xs-feature-text-content p {
     margin-bottom: 30px;
 }
@@ -3758,11 +3798,11 @@ svg {
 }
 
 .xs-event-content h4 {
-    font-size: 2.57143em;
-    color: #041d57;
+    font-size: 35px;
+    color: #d52b29;
     font-weight: 700;
-    letter-spacing: -0.3px;
-    margin-bottom: 30px;
+    letter-spacing: 0;
+    margin-bottom: 0px;
 }
 
 .xs-event-wraper .xs-horizontal-tabs {
@@ -3781,7 +3821,7 @@ svg {
 .xs-evnet-meta-date {
     text-align: center;
     border-radius: 5px;
-    background-color: #041d57;
+    background-color: #d52b29;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -3812,21 +3852,23 @@ svg {
 
 .xs-event-schedule h5 {
     margin-bottom: 0;
-    color: #2cc391;
-    font-weight: 700;
-    font-size: 1.5em;
-    line-height: 1.5;
+    color: #003049;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 1.3;
 }
 
 .xs-list-group li {
-    color: #041d57;
-    font-size: 1.07143em;
-    font-weight: 500;
+    color: #003049;
+    font-size: 13px;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
 .xs-list-group li span {
     color: #626c84;
+    font-size: 11px;
+    font-weight: 500;
 }
 
 .xs-list-group li:last-child {
@@ -3873,7 +3915,7 @@ svg {
 
 .xs-horizontal-tabs .nav-tabs .nav-item {
     margin-bottom: 0;
-    width: 50%;
+    width: 33.33%;
 }
 
 .xs-horizontal-tabs .nav-tabs .nav-item .nav-link {
@@ -3899,7 +3941,7 @@ svg {
     border-right: 1px solid #eaeaea;
     border-bottom: 1px solid transparent;
     background-color: #fff;
-    border-top: 5px solid #2cc391;
+    border-top: 5px solid #d52b29;
 }
 
 .xs-horizontal-tabs .nav-tabs .nav-item:last-child .nav-link {
@@ -4014,8 +4056,8 @@ svg {
 }
 
 .xs-banner-inner-section {
-    padding-top: 245px;
-    padding-bottom: 279px;
+    padding-top: 260px;
+    padding-bottom: 200px;
     position: relative;
 }
 
@@ -5049,7 +5091,7 @@ h3 {
 }
 
 .xs-round-nav:hover {
-    background-color: black;
+    background-color: #003049 !important;
     transition: all 0.4s ease;
 }
 
@@ -5069,9 +5111,13 @@ h3 {
     line-height: 38px;
     border: 1px solid #d52b29;
     background-color: transparent;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .xs-contact-details .xs-social-list-v2 li a:hover {
     background-color: #003049;
+}
+
+.nav-tabs>li>a {
+    margin-right: 0px
 }

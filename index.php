@@ -20,8 +20,9 @@ $sliders = $trainer->getSliders();
 
 <!-- Font Awesome -->
 
-<!-- Template Style sheet -->
-<link href="team/css/style.css" rel="stylesheet">
+<!-- team css -->
+<link rel="stylesheet" href="assets/css/team.css">
+<!-- team css end -->
 
 <style>
     .venue {
@@ -509,46 +510,54 @@ $sliders = $trainer->getSliders();
     </script>
 
     <!-- team start -->
-
-    <section class="team" style="margin-top:80px;">
+    <section class="xs-section-padding">
         <div class="container">
             <div class="xs-heading row xs-mb-60">
                 <div class="col-md-12 col-xl-12">
-                    <h2 class="xs-title">DISTRICT CABINET</h2>
+                    <h2 class="xs-title">DISTRICT COUNCIL MEMBERS</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row active-with-click">
                 <?php foreach ($mags as $key => $m) : ?>
                     <?php if ($key > 3) {
                         break;
                     } ?>
-
-                    <div class="column">
-                        <div class="team-6">
-                            <div class="team-img">
-                                <img src="./assets/images/dist_management/<?php echo $m->profile_pic; ?>" alt="Team Image">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <article class="material-card Red">
+                            <h2>
+                                <span><?php echo $m->name; ?></span>
+                                <strong><?php echo $m->designation; ?></strong>
+                            </h2>
+                            <div class="mc-content">
+                                <div class="img-container">
+                                    <img class="img-responsive" src="./assets/images/dist_management/<?php echo $m->profile_pic; ?>">
+                                </div>
+                                <div class="mc-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ...
+                                </div>
                             </div>
-                            <div class="team-content agile_team_grid1">
-                                <h2><?php echo $m->name; ?></h2>
-                                <h3><?php echo $m->designation; ?></h3>
+                            <a class="mc-btn-action">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <div class="mc-footer">
                                 <div class="team-social">
                                     <ul class="xs-social-list-v2">
-                                        <li><a href="https://www.instagram.com/<?php echo $m->insta; ?>" class="color-instagram social-in"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="https://in.linkedin.com/in/<?php echo $m->linked; ?>" class="color-linkedin social-li"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a target=_parent href="#" class="fa fa-fw fa-envelope"></a></li>
+                                        <li><a target=_parent href="https://in.linkedin.com/in/<?php echo $m->linked; ?>" class="fa fa-fw fa-linkedin"></a></li>
+                                        <li><a target=_parent href="https://www.instagram.com/<?php echo $m->insta; ?>" class="fa fa-fw fa-instagram"></a></li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
-        <div style="text-align: center;">
-            <a href="dis-directory.php" class="btn btn-primary bg-light-red">View All Cabinets</a>
-            </a>
-        </div>
     </section>
-
+    <div style="text-align: center;">
+        <a href="dis-directory.php" class="btn btn-primary bg-light-red">View All Council Members</a>
+        </a>
+    </div>
     <!-- team end -->
 
     <!-- event start -->
@@ -911,27 +920,33 @@ $sliders = $trainer->getSliders();
                 <span class="badge"></span> View More
             </a>
         </div>
-
     </section>
-
+    <section class="xs-section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="xs-feature-image-box-app image-1">
+                        <img src="assets/images/backgrounds/new_app_img.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="xs-feature-text-content" style="padding-top: 10px;">
+                        <div class="xs-heading">
+                            <h3 class="xs-title-app">Unlock Exclusive Experience</h3>
+                            <h5 class="xs-title-p">Just Scan to Explore and Report at your finger tips now. Download Rotaract District 3201 App</h5>
+                        </div>
+                        <!--<p align="justify" style="text-align: center;"><img src="assets/images/backgrounds/play_store.png" alt=""></p>-->
+                        <div class="xs-feature-image-box-qr image-1" style="text-align: center;">
+                            <img src="assets/images/backgrounds/App_QR.png" alt="">
+                            <p align="justify" style="text-align: center;">(Android users only)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </div>
-
-
-
 </body>
-
-<script>
-    // const dist_eve=document.getElementById('dist_eve');
-    // console.log(dist_eve.innerHTML);
-    // if(dist_eve.innerHTML.trim.length==0){
-    //     dist_eve.innerHTML=`
-    //     <div class='col-md-12'>
-    //     <h3 style='text-align:center'>No events as of now</h3>
-    //     </div>
-    //     `;
-    // }
-</script>
-
 <?php
 include "dis-footer.php";
 ?>
@@ -968,6 +983,37 @@ include "dis-footer.php";
             });
         }
     })(window.jQuery);
+</script>
+<script>
+    $(function() {
+        $('.material-card > .mc-btn-action').click(function() {
+            var card = $(this).parent('.material-card');
+            var icon = $(this).children('i');
+            icon.addClass('fa-spin-fast');
+
+            if (card.hasClass('mc-active')) {
+                card.removeClass('mc-active');
+
+                window.setTimeout(function() {
+                    icon
+                        .removeClass('fa-arrow-left')
+                        .removeClass('fa-spin-fast')
+                        .addClass('fa-bars');
+
+                }, 800);
+            } else {
+                card.addClass('mc-active');
+
+                window.setTimeout(function() {
+                    icon
+                        .removeClass('fa-bars')
+                        .removeClass('fa-spin-fast')
+                        .addClass('fa-arrow-left');
+
+                }, 800);
+            }
+        });
+    });
 </script>
 
 </html>

@@ -4,7 +4,7 @@ include "dis-header.php";
 
 $club = new Club;
 $clubs = $club->getClubs();
-foreach($clubs as $cl){
+foreach ($clubs as $cl) {
     unset($cl->password);
     unset($cl->email);
     unset($cl->phone);
@@ -117,11 +117,17 @@ foreach($clubs as $cl){
     }
 
     .filter p {
-        color: black !important;
+        color: #343a40 !important;
         margin-bottom: 15px !important;
+        font-weight: 500;
     }
-    @media (max-width: 467px){
-        .wrap{
+
+    span {
+        font-weight: 400;
+    }
+
+    @media (max-width: 467px) {
+        .wrap {
             width: 75%;
             top: 75%;
         }
@@ -187,7 +193,7 @@ foreach($clubs as $cl){
             <div class="row" id='club_cont'>
                 <?php foreach ($clubs as $cl) : ?>
                     <div class="col-lg-6 col-md-6 ">
-                        <div class="row xs-single-event event-green">
+                        <div class="row xs-single-event">
                             <div class="col-md-5">
                                 <div class="xs-event-image">
                                     <img src="assets/images/club_logo/<?php echo isset($cl->logo) ? $cl->logo : 'rtrlogo1.png'; ?>">
@@ -200,8 +206,8 @@ foreach($clubs as $cl){
 
                                     <p>Club ID : <span><?php echo $cl->cid; ?></span></p>
                                     <p>Charter Date : <span><?php echo isset($cl->udate) ? dateFix($cl->udate) : "-"; ?></span></p>
-                                    <p>President Name: <span><?php echo $cl->president_name; ?></span></p>
-                                    <p>Secretary Name: <span><?php echo $cl->secretary_name; ?></span></p>
+                                    <p>President Name : <span><?php echo $cl->president_name; ?></span></p>
+                                    <p>Secretary Name : <span><?php echo $cl->secretary_name; ?></span></p>
                                     <a href="club-index.php?cid=<?php echo $cl->cid; ?>" target="_blank" class="btn btn-primary">
                                         Visit Us
                                     </a>
@@ -225,7 +231,7 @@ foreach($clubs as $cl){
     const cont = document.getElementById('club_cont');
     const form_src = document.getElementById('form_src');
     const src_box = document.getElementById('src_box');
-    const  data=<?php echo json_encode($clubs);?>;
+    const data = <?php echo json_encode($clubs); ?>;
 
     form_src.addEventListener('submit', (e) => {
         e.preventDefault();

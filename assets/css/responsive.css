@@ -241,6 +241,10 @@
         position: relative
     }
 
+    .xs-header.xs-fullWidth {
+        height: auto !important;
+    }
+
     .xs-header.xs-fullWidth .nav-brand {
         padding: 13px 0;
         text-align: center;

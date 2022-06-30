@@ -49,9 +49,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel='stylesheet alternate' title='color-1' type='text/css' href='assets/css/colors/color-1.css'>
-    <link rel='stylesheet alternate' title='color-2' type='text/css' href='assets/css/colors/color-2.css'>
-    <link rel='stylesheet alternate' title='color-3' type='text/css' href='assets/css/colors/color-3.css'>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <style>
@@ -65,6 +63,11 @@
             .xs-header .nav-menus-wrapper .xs-logo-wraper .top-logo {
                 display: none;
             }
+
+            header.sticky {
+                height: auto !important;
+            }
+
         }
 
         /*header .logo-stick{*/
@@ -76,8 +79,16 @@
 
         header.sticky {
             background: #fff !important;
-            margin-top: -30px;
+            margin-top: 5px;
             z-index: 5 !important;
+            border-radius: 50px;
+            animation-name: slideInDown;
+            -webkit-animation-duration: 1.25s;
+            animation-duration: 1.25s;
+            height: 12% !important;
+            box-shadow: inset 0px 0px 15px 5px #00000047 !important;
+            margin-left: 31px;
+            width: 95% !important;
         }
 
         /*header.sticky .stick{*/
@@ -96,7 +107,7 @@
         }
 
         header.sticky .logo-01 {
-            padding-left: 45px;
+            padding-left: 5px;
         }
 
         header.sticky .nav-brand-1 {
@@ -105,6 +116,19 @@
 
         header.sticky .nav-brand-1 img {
             height: 70px;
+        }
+
+        .header-menu {
+            border-radius: 40px;
+            box-shadow: inset 0px 0px 15px 5px #00000047;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            background: #fff;
+        }
+
+        header.sticky .header-menu {
+            box-shadow: none;
+            background: transparent !important;
         }
 
         @media(max-width:993px) {
@@ -149,6 +173,13 @@
         @media(max-width:1286px) {
             .xs-header.xs-fullWidth .nav-menu li a {
                 padding: 20px 10px;
+            }
+        }
+
+        @media(max-width:767px) {
+            header.sticky {
+                margin-left: 20px;
+                width: 90% !important;
             }
         }
     </style>
@@ -205,28 +236,37 @@
                                 <img src="assets/images/dis_header/L1.png" alt="">
                             </a>
                         </div>
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-6 col-md-6 header-menu">
                             <ul class="nav-menu" style="text-align:center;">
                                 <li><a href="index.php">Home</a></li>
                                 <li><a href="dis-about.php">About</a></li>
-                                <li><a>Team</a>
+                                <li><a href="https://example.com/no-js-login" onclick="return yes_js_login();">Team</a>
                                     <ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
                                         <li class=""><a href="dis-directory.php">Council Members</a></li>
                                         <li class=""><a href="dis-trainer.php">Trainers</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="dis-clubs.php">Clubs</a>
-                                    <!-- <ul class="nav-dropdown">
-                                    <li><a href="dis-campus.php">Campus</a></li>
-                                    <li><a href="dis-community.php">Community</a></li>
-                                </ul> -->
-                                </li>
-                                <li><a>District Initiatives</a>
+                                <script>
+                                    yes_js_login = function() {
+                                        // Your code here
+                                        return false;
+                                    }
+                                </script>
+                                <li><a>District</a>
                                     <ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
-                                        <li class=""><a href="dis-gallery.php">Gallery</a>
-                                        <li class=""><a href="dis-trainer.php">Trainers</a></li>
+                                        <li class=""><a href="dis-event.php">District Events</a>
+                                        <li class=""><a href="gallery.php?grp=rotabuzz">Rotabuzz</a></li>
+                                        <li class=""><a href="gallery.php?grp=district_initiatives">District Initiatives</a></li>
+                                        <li class=""><a href="gallery.php?grp=talent_hub">Talent Hub Cell</a>
+                                        <li class=""><a href="mental_health.php">Mental Health</a></li>
+                                        <li class=""><a href="#">District Directory</a></li>
                                     </ul>
                                 </li>
+                                <li><a>Clubs</a>
+                                    <ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
+                                        <li><a href="dis-clubs.php">Clubs Profile</a></li>
+                                        <li><a href="dis-clubevent.php">Clubs Events</a></li>
+                                    </ul>
                                 </li>
                                 <li><a href="dis-contact.php">Contact</a></li>
                             </ul>

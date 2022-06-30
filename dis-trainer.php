@@ -7,9 +7,6 @@ include "dis-header.php";
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
-
-<!-- Mirrored from demo.xpeedstudio.com/html/charitypress/index-v3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Apr 2021 06:33:40 GMT -->
-
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 
@@ -20,36 +17,20 @@ include "dis-header.php";
 <link href="team/css/style.css" rel="stylesheet">
 
 <body>
-    <!--<div id="preloader">-->
-    <!--    <div class="spinner">-->
-    <!--        <div class="double-bounce1"></div>-->
-    <!--        <div class="double-bounce2"></div>-->
-    <!--    </div>-->
-    <!--</div>-->
-
-    <div class='colors'>
-        <a href="#" class="btn btn-primary panel_opener"><i class="fa fa-gear"></i></a>
-        <div class="colors_panel">
-            <h5>Colors</h5>
-            <a class='color-1' data-val='color-1' href='#'></a>
-            <a class='color-2' data-val='color-2' href='#'></a>
-            <a class='color-3' data-val='color-3' href='#'></a>
-        </div>
-    </div>
-    <section class="team">
-        <div class="container" style="padding-top:170px;">
-            <div class="xs-heading row xs-mb-60">
-                <div class="col-md-12 col-xl-12" style="text-align:center;">
-                    <h4 class="xs-title">DISTRICT TRAINER</h4>
-                </div>
+    <section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/club-bg.png')">
+        <div class="xs-black-overlay"></div>
+        <div class="container">
+            <div class="color-white xs-inner-banner-content">
+                <h2>DISTRICT TRAINER</h2>
             </div>
+        </div>
+    </section>
+    <section class="team xs-section-padding">
+        <div class="container">
             <div class="row">
-
                 <?php foreach ($trainers as $m) : ?>
                     <div class="column">
-
                         <div class="team-6">
-
                             <div class="team-img">
                                 <img src="./assets/images/dist_trainers/<?php echo $m->profile_pic; ?>" alt="Team Image">
                             </div>
@@ -65,17 +46,10 @@ include "dis-header.php";
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 <?php endforeach; ?>
-
             </div>
-            <!--<div class="row">-->
-            <!--    <div class="col-md-12 col-xl-12">-->
-            <!--        <h4 class="xs-title" style="text-align:center; font-size:20px; margin: 30px;">Files yet to be Loaded up, so just stay soon</h4>-->
-            <!--    </div>-->
-            <!--</div>-->
         </div>
     </section>
 </body>
@@ -95,9 +69,6 @@ include "dis-header.php";
     ga('create', 'UA-67816487-1', 'auto');
     ga('send', 'pageview');
 </script>
-
-
-
 <?php
 include "dis-footer.php";
 ?>

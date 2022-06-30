@@ -10382,7 +10382,7 @@ a.text-warning:focus {
 }
 
 .dark .text-danger-svg {
-    color: #158df7 !important
+    color: #f7ad29 !important
 }
 
 .text-danger-icon {
@@ -10721,7 +10721,7 @@ a.text-skyblue:focus {
 }
 
 .dark .card-block.card-height:hover {
-    box-shadow: 7px 7px 5px 2px #158df7, inset 5px 5px 10px 2px #181818e6;
+    box-shadow: 5px 5px 6px 0px #f7ad29, inset 7px 7px 8px 2px #181818e6;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
 }
@@ -31338,7 +31338,7 @@ body.mm-hotel.header-style-1 .main-circle i {
     box-sizing: border-box;
     content: attr(data-tooltip);
     color: #fff;
-    background: black;
+    background: #d32b29;
     padding: 8px;
     border-radius: 5px;
     font-size: 12px;
@@ -31348,6 +31348,10 @@ body.mm-hotel.header-style-1 .main-circle i {
     transform: translateY(10px);
     transition: opacity 0.3s, transform 0.2s;
 
+}
+
+.dark [data-tooltip]::after {
+    background: #003049;
 }
 
 [data-tooltip]:hover::after {
